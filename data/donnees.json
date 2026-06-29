@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "titre": "Où est passé l'argent de la journée de solidarité ?",
+    "derniere_maj": "2026-06-29",
+    "devise": "EUR",
+    "note": "Chaque chiffre porte une source et un statut. Statuts : 'confirme' (chiffre publié par une source officielle), 'estime' (reconstitué par recoupement ou projection officielle), 'a_confirmer' (ordre de grandeur, à vérifier sur source primaire). Les montants sont en euros."
+  },
+  "reperes": {
+    "taux_csa": 0.003,
+    "taux_casa": 0.003,
+    "annee_creation": 2004,
+    "heures_travaillees": 7,
+    "cumul_officiel_min": 50000000000,
+    "cumul_officiel_libelle": "« plus de 50 milliards d'euros » (chiffrage CNSA, 20 ans du dispositif)",
+    "enveloppe_climatisation_2004": 20000000,
+    "chambres_ehpad_non_climatisees_2026": 0.91
+  },
+  "sources": [
+    { "id": "cnsa-20ans", "titre": "CNSA — De la journée de solidarité au Service public de l'autonomie (bilan 20 ans)", "editeur": "CNSA", "url": "https://www.cnsa.fr/presse/de-la-journee-de-solidarite-au-service-public-de-lautonomie", "consulte_le": "2026-06-29" },
+    { "id": "cnsa-cc-2024", "titre": "Les chiffres clés de l'aide à l'autonomie 2024", "editeur": "CNSA", "url": "https://www.cnsa.fr/sites/default/files/2024-06/PUB-CNSA_Chiffres_cles_2024_Access-01.pdf", "consulte_le": "2026-06-29" },
+    { "id": "cnsa-cc-2025", "titre": "Les chiffres clés de l'aide à l'autonomie 2025", "editeur": "CNSA", "url": "https://www.cnsa.fr/sites/default/files/2025-06/PUB-CNSA_CC25-ACCESS.pdf", "consulte_le": "2026-06-29" },
+    { "id": "cnsa-jds-2019", "titre": "Journée de solidarité 2019 : 2,878 milliards d'euros", "editeur": "CNSA", "url": "https://www.cnsa.fr/actualites-agenda/actualites/journee-de-solidarite-2019-2878-milliards-deuros-au-benefice-des-personnes-agees-et-des-personnes-handicapees", "consulte_le": "2026-06-29" },
+    { "id": "cnsa-comptes-2024", "titre": "Conseil de la CNSA : comptes 2024 et répartition de plus de 41 milliards d'euros", "editeur": "CNSA", "url": "https://www.cnsa.fr/actualites/conseil-de-la-cnsa-adoption-des-comptes-2024-et-repartition-de-plus-de-41-milliards", "consulte_le": "2026-06-29" },
+    { "id": "abaq-2018", "titre": "Collecte de la CSA et de la CASA en 2018", "editeur": "ABAQ Conseil", "url": "https://www.abaq-conseil.fr/actualites-cabinet-conseil-abaq-lyon/349-cnsa-journee-solidarite-2018.html", "consulte_le": "2026-06-29" },
+    { "id": "previssima-2019", "titre": "Journée de solidarité : le dispositif rapportera 2,9 Md€ en 2019", "editeur": "Previssima", "url": "https://www.previssima.fr/actualite/journee-de-solidarite-le-dispositif-rapportera-29-md-en-2019.html", "consulte_le": "2026-06-29" },
+    { "id": "previssima-2022", "titre": "La journée de solidarité devrait rapporter 3 milliards d'euros en 2022", "editeur": "Previssima", "url": "https://www.previssima.fr/actualite/la-journee-de-solidarite-devrait-rapporter-3-milliards-deuros-a-la-branche-autonomie-en-2022.html", "consulte_le": "2026-06-29" },
+    { "id": "ash-2013", "titre": "La journée de solidarité a rapporté 2,41 milliards d'euros en 2013", "editeur": "ASH — Actualités sociales hebdomadaires", "url": "https://www.ash.tm.fr/hebdo/2864/cote-cour/la-journee-de-solidarite-a-rapporte-241-milliards-deuros-en-2013-404627.php", "consulte_le": "2026-06-29" },
+    { "id": "capgeris-2014", "titre": "Journée de solidarité — 23 milliards d'euros collectés entre 2004 et 2014", "editeur": "Capgeris", "url": "https://www.capgeris.com/dependance-et-5eme-risque-1681/journee-de-solidarite-23-milliards-d-euros-collectes-entre-2004-et-2014-a30713.htm", "consulte_le": "2026-06-29" },
+    { "id": "aef-2024", "titre": "La journée de solidarité va rapporter 3,42 milliards d'euros pour 2024 (CNSA)", "editeur": "AEF info", "url": "https://www.aefinfo.fr/depeche/712060", "consulte_le": "2026-06-29" },
+    { "id": "an-68328", "titre": "Question écrite n°68328 — journée de solidarité (montants annuels)", "editeur": "Assemblée nationale", "url": "https://www.assemblee-nationale.fr/dyn/13/questions/QANR5L13QE68328", "consulte_le": "2026-06-29" },
+    { "id": "service-public-csa", "titre": "Contribution solidarité autonomie (CSA)", "editeur": "Service-public / Code du travail numérique", "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F32872", "consulte_le": "2026-06-29" },
+    { "id": "casf-l14105", "titre": "Article L.14-10-5 du Code de l'action sociale et des familles (clé de répartition)", "editeur": "Légifrance", "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037961356", "consulte_le": "2026-06-29" },
+    { "id": "casf-d312161", "titre": "Article D.312-161 CASF — pièce rafraîchie en EHPAD", "editeur": "Légifrance", "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074069/LEGISCTA000006196481", "consulte_le": "2026-06-29" },
+    { "id": "loi-2004-626", "titre": "Loi n°2004-626 du 30 juin 2004 (solidarité pour l'autonomie)", "editeur": "Légifrance / JORF", "url": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000622485", "consulte_le": "2026-06-29" },
+    { "id": "spf-canicule", "titre": "Bilans de surmortalité estivale / plan canicule", "editeur": "Santé publique France", "url": "https://www.santepubliquefrance.fr/determinants-de-sante/climat/fortes-chaleurs-canicule", "consulte_le": "2026-06-29" },
+    { "id": "courdescomptes-2023", "titre": "Rapport sur la branche Autonomie (écarts budget/exécution, opacité territoriale)", "editeur": "Cour des comptes", "url": "https://www.ccomptes.fr/fr/publications/la-branche-autonomie", "consulte_le": "2026-06-29" },
+    { "id": "libault-2019", "titre": "Rapport Libault — Concertation Grand Âge et Autonomie", "editeur": "Ministère des Solidarités", "url": "https://sante.gouv.fr/IMG/pdf/rapport_grand_age_autonomie.pdf", "consulte_le": "2026-06-29" },
+    { "id": "franceinfo-2026", "titre": "Adaptation de la France aux fortes chaleurs depuis 2003", "editeur": "Franceinfo", "url": "https://www.franceinfo.fr/", "consulte_le": "2026-06-29" }
+  ],
+  "collecte_annuelle": [
+    { "annee": 2004, "csa": 900000000, "casa": 0, "total": 900000000, "statut": "a_confirmer", "source": "cnsa-20ans", "note": "Année partielle : le dispositif démarre à l'été 2004. Ordre de grandeur." },
+    { "annee": 2005, "csa": 1950000000, "casa": 0, "total": 1950000000, "statut": "confirme", "source": "an-68328" },
+    { "annee": 2006, "csa": 2090000000, "casa": 0, "total": 2090000000, "statut": "confirme", "source": "an-68328" },
+    { "annee": 2007, "csa": 2220000000, "casa": 0, "total": 2220000000, "statut": "confirme", "source": "an-68328" },
+    { "annee": 2008, "csa": 2300000000, "casa": 0, "total": 2300000000, "statut": "estime", "source": "an-68328", "note": "Pic avant la baisse liée à la crise de 2009." },
+    { "annee": 2009, "csa": 2210000000, "casa": 0, "total": 2210000000, "statut": "estime", "source": "an-68328", "note": "Recul d'environ 3,9 % lié à la crise économique." },
+    { "annee": 2010, "csa": 2240000000, "casa": 0, "total": 2240000000, "statut": "confirme", "source": "an-68328", "note": "Réparti : 1 346 M€ personnes âgées, 895 M€ personnes handicapées." },
+    { "annee": 2011, "csa": 2350000000, "casa": 0, "total": 2350000000, "statut": "a_confirmer", "source": "an-68328" },
+    { "annee": 2012, "csa": 2390000000, "casa": 0, "total": 2390000000, "statut": "confirme", "source": "an-68328" },
+    { "annee": 2013, "csa": 2410000000, "casa": 0, "total": 2410000000, "statut": "confirme", "source": "ash-2013", "note": "CASA créée le 1er avril 2013 mais affectée au Fonds de solidarité vieillesse (FSV) en 2013-2014, pas encore à la CNSA." },
+    { "annee": 2014, "csa": 2430000000, "casa": 0, "total": 2430000000, "statut": "confirme", "source": "capgeris-2014", "note": "Cumul 2004-2014 : 23,497 Md€ (CSA)." },
+    { "annee": 2015, "csa": 2400000000, "casa": 1000000000, "total": 3400000000, "statut": "estime", "source": "cnsa-20ans", "note": "La CASA est affectée à la CNSA à partir de 2015." },
+    { "annee": 2016, "csa": 2410000000, "casa": 740000000, "total": 3150000000, "statut": "a_confirmer", "source": "cnsa-20ans" },
+    { "annee": 2017, "csa": 2420000000, "casa": 750000000, "total": 3170000000, "statut": "a_confirmer", "source": "cnsa-20ans" },
+    { "annee": 2018, "csa": 2420000000, "casa": 765400000, "total": 3185400000, "statut": "confirme", "source": "abaq-2018" },
+    { "annee": 2019, "csa": 2094200000, "casa": 784700000, "total": 2878900000, "statut": "confirme", "source": "cnsa-jds-2019", "note": "La CSA baisse : la réforme de la CSG (2019) remplace la fraction de CSA assise sur les revenus du patrimoine." },
+    { "annee": 2020, "csa": 2131000000, "casa": 816500000, "total": 2947500000, "statut": "confirme", "source": "cnsa-cc-2024" },
+    { "annee": 2021, "csa": 2200000000, "casa": 850000000, "total": 3050000000, "statut": "estime", "source": "cnsa-20ans", "note": "Création de la branche Autonomie : CSA et CASA fondues dans un panier de recettes (dont CSG)." },
+    { "annee": 2022, "csa": 2100000000, "casa": 900000000, "total": 3000000000, "statut": "estime", "source": "previssima-2022", "note": "Projection CNSA : « environ 3 Md€ »." },
+    { "annee": 2023, "csa": 2300000000, "casa": 900000000, "total": 3200000000, "statut": "confirme", "source": "cnsa-20ans" },
+    { "annee": 2024, "csa": 2450000000, "casa": 970000000, "total": 3420000000, "statut": "confirme", "source": "aef-2024", "note": "8,2 % des recettes affectées de la branche Autonomie (≈ 41 Md€)." },
+    { "annee": 2025, "csa": 2500000000, "casa": 1000000000, "total": 3500000000, "statut": "estime", "source": "cnsa-cc-2025", "note": "Recettes CNSA 2025 : CSA 2,5 Md€, CASA 1,0 Md€." },
+    { "annee": 2026, "csa": 2550000000, "casa": 1020000000, "total": 3570000000, "statut": "a_confirmer", "source": "cnsa-cc-2025", "note": "Projection sur la trajectoire récente." }
+  ],
+  "repartition_legale": {
+    "intitule": "Clé de répartition légale du produit de la CSA (art. L.14-10-5 CASF)",
+    "groupes": [
+      { "groupe": "Personnes âgées", "part": 0.60, "couleur": "#1f6f8b",
+        "postes": [
+          { "beneficiaire": "Établissements et services (ESMS) — personnes âgées", "part": 0.39 },
+          { "beneficiaire": "Allocation personnalisée d'autonomie (APA)", "part": 0.20 },
+          { "beneficiaire": "Plan d'aide à l'investissement — personnes âgées", "part": 0.01 }
+        ]
+      },
+      { "groupe": "Personnes handicapées", "part": 0.40, "couleur": "#e08e0b",
+        "postes": [
+          { "beneficiaire": "Prestation de compensation du handicap (PCH) et MDPH", "part": 0.26 },
+          { "beneficiaire": "Établissements et services (ESMS) — personnes handicapées", "part": 0.13 },
+          { "beneficiaire": "Plan d'aide à l'investissement — personnes handicapées", "part": 0.01 }
+        ]
+      }
+    ],
+    "source": "casf-l14105"
+  },
+  "budget_branche": {
+    "annee": 2024,
+    "total": 41820000000,
+    "postes": [
+      { "nom": "ESMS personnes âgées (OGD PA)", "montant": 17610000000 },
+      { "nom": "ESMS personnes handicapées (OGD PH)", "montant": 15730000000 },
+      { "nom": "Prestations individuelles (APA, PCH, AEEH, divers)", "montant": 7700000000 },
+      { "nom": "Autres dépenses (investissement, gestion, revalorisations)", "montant": 780000000 }
+    ],
+    "source": "cnsa-comptes-2024",
+    "note": "Budget global de la branche Autonomie, financé à ~82 % par la CSG ; la journée de solidarité (CSA+CASA) en représente environ 8 %."
+  },
+  "recettes_cnsa_2025": {
+    "annee": 2025,
+    "postes": [
+      { "nom": "CSG", "montant": 37300000000 },
+      { "nom": "CSA (journée de solidarité — employeurs)", "montant": 2500000000 },
+      { "nom": "CASA (journée de solidarité — retraités)", "montant": 1000000000 },
+      { "nom": "Taxe sur les salaires", "montant": 900000000 },
+      { "nom": "Autres recettes", "montant": 800000000 }
+    ],
+    "source": "cnsa-cc-2025"
+  },
+  "promesse_vs_realite": {
+    "enveloppe_climatisation_2004": 20000000,
+    "chambres_non_climatisees_pct_2026": 0.91,
+    "obligation_legale": "Au moins une pièce rafraîchie par établissement (art. D.312-161 CASF), pas la climatisation des chambres.",
+    "surmortalite_estivale": [
+      { "annee": 2019, "deces": 1879 },
+      { "annee": 2020, "deces": 1530 },
+      { "annee": 2022, "deces": 2051 },
+      { "annee": 2023, "deces": 1523 }
+    ],
+    "source": "spf-canicule",
+    "note": "La canicule de 2003 a causé près de 15 000 décès en France."
+  },
+  "analyses": {
+    "avertissement": "Cette section rassemble des interprétations et prises de position. Elle est distincte des données factuelles ci-dessus.",
+    "estimation_haute": {
+      "valeur_libelle": "plus de 62 Md€",
+      "auteur": "Document de synthèse « Analyse sous prisme libéral » (juin 2026)",
+      "explication": "Les deux chiffres se réconcilient par le périmètre. En sommant ce tableau année par année : la CSA seule (employeurs) atteint environ 51,7 Md€ depuis 2004 — ce qui correspond au chiffrage officiel de la CNSA (« plus de 50 Md€ »). En ajoutant la CASA (retraités, depuis 2015), l'ensemble atteint environ 62 Md€ — ce qui correspond à l'estimation du document. Aucun des deux n'est « faux » : ils ne comptent simplement pas la même chose. Le présent site affiche les deux, clairement étiquetés."
+    },
+    "lectures": [
+      { "angle": "Lecture libérale (document fourni)", "points": [
+        "La CSA est analysée comme un impôt déguisé, sans contrepartie de droits individuels ni ligne explicite sur la fiche de paie.",
+        "Fongibilité des fonds depuis 2021 (branche Autonomie) : la traçabilité euro par euro de la journée de solidarité n'est plus possible.",
+        "Coût d'opportunité : une journée de travail nationale vaudrait ~11 Md€ de valeur ajoutée, alors que la CSA n'en collecte qu'environ un tiers.",
+        "Paradoxe : prélever pour protéger les personnes âgées de la chaleur, mais ne pas climatiser leurs chambres (raisons environnementales/budgétaires)."
+      ], "source": "cnsa-20ans" },
+      { "angle": "Positions syndicales", "points": [
+        "CFDT : une éventuelle 2e journée pèserait sur les seuls salariés alors que le risque dépendance est universel.",
+        "CGT : remise en cause de la durée légale du travail (35 h)."
+      ], "source": "cnsa-20ans" },
+      { "angle": "Cour des comptes", "points": [
+        "Sous-consommation structurelle des crédits et reports d'une année sur l'autre.",
+        "Opacité du suivi territorial (APA versée via les départements), absence de bilan consolidé national.",
+        "Effet de substitution : certains financements remplacent des dépenses que l'État ou les départements auraient assumées."
+      ], "source": "courdescomptes-2023" },
+      { "angle": "Comparaisons internationales", "points": [
+        "Allemagne : assurance dépendance obligatoire (Pflegeversicherung, 1995) à droits individuels.",
+        "Espagne : pas de mécanisme dédié mais climatisation quasi universelle des lieux publics.",
+        "Singapour : capitalisation individuelle (CareShield Life)."
+      ], "source": "libault-2019" }
+    ]
+  }
+}

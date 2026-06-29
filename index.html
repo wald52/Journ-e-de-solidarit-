@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Où est passé l'argent de la journée de solidarité ?</title>
+  <meta name="description" content="Site citoyen : combien rapporte la journée de solidarité en France, année par année, et où va l'argent. Données sourcées, diagramme de Sankey des flux." />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Navigation principale">
+      <a class="nav-logo" href="#haut">€ · Journée de solidarité</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Ouvrir le menu">☰</button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#mecanisme">Le mécanisme</a></li>
+        <li><a href="#flux">Les flux</a></li>
+        <li><a href="#annees">Année par année</a></li>
+        <li><a href="#ou-va">Où va l'argent</a></li>
+        <li><a href="#promesse">Promesse vs réalité</a></li>
+        <li><a href="#analyses">Analyses</a></li>
+        <li><a href="#sources">Sources</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenu">
+    <!-- 1. La question -->
+    <section class="hero" id="haut">
+      <div class="wrap">
+        <p class="kicker">Site citoyen · transparence des fonds publics</p>
+        <h1>Où est passé l'argent de la <span>journée de solidarité</span> ?</h1>
+        <p class="lead">
+          Chaque année, les salariés travaillent 7 heures « gratuitement » et les retraités
+          imposables sont mis à contribution, pour financer l'aide à l'autonomie des personnes
+          âgées et handicapées. Combien cela représente-t-il, et où va cet argent&nbsp;?
+          Voici les chiffres, sourcés, année après année.
+        </p>
+        <div class="counters" id="counters" aria-live="polite">
+          <!-- rempli par JS -->
+        </div>
+        <p class="hero-note" id="hero-note"></p>
+      </div>
+    </section>
+
+    <!-- 2. Le mécanisme -->
+    <section class="section" id="mecanisme">
+      <div class="wrap">
+        <h2>Le mécanisme : qui paie, et comment ?</h2>
+        <p>
+          La journée de solidarité a été créée par la <strong>loi du 30 juin 2004</strong>,
+          dans la foulée de la canicule de 2003 (près de 15&nbsp;000 décès). Elle repose sur
+          deux prélèvements affectés à la <abbr title="Caisse nationale de solidarité pour l'autonomie">CNSA</abbr>.
+        </p>
+        <div class="cards">
+          <article class="card">
+            <h3>CSA — les salariés &amp; employeurs</h3>
+            <p><strong>0,30 %</strong> de la masse salariale brute, versés par l'employeur
+            en contrepartie d'une journée travaillée non rémunérée. En place depuis 2004.</p>
+          </article>
+          <article class="card">
+            <h3>CASA — les retraités</h3>
+            <p><strong>0,30 %</strong> sur les pensions de retraite et d'invalidité imposables.
+            Créée en 2013, elle alimente la CNSA depuis 2015 (auparavant le FSV).</p>
+          </article>
+          <article class="card">
+            <h3>Peu visible</h3>
+            <p>La CSA n'apparaît pas comme une ligne « journée de solidarité » sur la fiche de
+            paie&nbsp;: c'est une contribution patronale. D'où la difficulté à en suivre l'usage.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Sankey -->
+    <section class="section alt" id="flux">
+      <div class="wrap">
+        <h2>Le parcours de l'argent</h2>
+        <p>
+          Diagramme de Sankey&nbsp;: des sources de financement (à gauche) vers la CNSA,
+          puis vers les bénéficiaires, selon la clé de répartition légale
+          (<abbr title="Code de l'action sociale et des familles">CASF</abbr>, art. L.14-10-5).
+          Les flux sont proportionnels au montant de l'année sélectionnée.
+        </p>
+        <div class="chart-controls">
+          <label for="annee-sankey">Année&nbsp;:</label>
+          <select id="annee-sankey" aria-label="Choisir l'année du diagramme"></select>
+        </div>
+        <div id="sankey" class="chart chart-tall" role="img" aria-label="Diagramme de flux de l'argent de la journée de solidarité"></div>
+        <p class="caption" id="sankey-caption"></p>
+      </div>
+    </section>
+
+    <!-- 4. Année par année -->
+    <section class="section" id="annees">
+      <div class="wrap">
+        <h2>Combien, année après année</h2>
+        <p>
+          Produit annuel de la journée de solidarité (CSA des employeurs + CASA des retraités).
+          Survolez les barres pour le détail. Chaque ligne du tableau porte sa source et un
+          statut de fiabilité.
+        </p>
+        <div id="bar-collecte" class="chart" role="img" aria-label="Histogramme de la collecte annuelle"></div>
+
+        <div class="legend-statuts">
+          <span class="badge confirme">confirmé</span> chiffre publié par une source officielle
+          <span class="badge estime">estimé</span> reconstitué / projection officielle
+          <span class="badge a_confirmer">à confirmer</span> ordre de grandeur à vérifier
+        </div>
+
+        <div class="table-wrap">
+          <table id="table-collecte">
+            <thead>
+              <tr>
+                <th scope="col">Année</th>
+                <th scope="col">CSA (employeurs)</th>
+                <th scope="col">CASA (retraités)</th>
+                <th scope="col">Total</th>
+                <th scope="col">Fiabilité</th>
+                <th scope="col">Source</th>
+              </tr>
+            </thead>
+            <tbody><!-- rempli par JS --></tbody>
+          </table>
+        </div>
+        <p class="caption">
+          <a id="download-csv" href="data/donnees.csv" download>⬇ Télécharger les données (CSV)</a>
+          &nbsp;·&nbsp;<a href="data/donnees.json" download>JSON</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- 5. Où va l'argent -->
+    <section class="section alt" id="ou-va">
+      <div class="wrap">
+        <h2>Où va l'argent ?</h2>
+        <p>
+          La loi fixe une clé de répartition&nbsp;: <strong>60 %</strong> pour les personnes
+          âgées, <strong>40 %</strong> pour les personnes handicapées, avec des sous-parts
+          détaillées ci-dessous. Dans les faits, la journée de solidarité n'est qu'une partie
+          (~8 %) du budget de la branche Autonomie, financée à ~82 % par la CSG.
+        </p>
+        <div class="two-col">
+          <div>
+            <h3>Clé de répartition légale</h3>
+            <div id="repartition" class="bars-stack"><!-- rempli par JS --></div>
+          </div>
+          <div>
+            <h3>Budget de la branche Autonomie (2024)</h3>
+            <div id="budget" class="bars-stack"><!-- rempli par JS --></div>
+          </div>
+        </div>
+        <div class="callout">
+          <h3>Les angles morts (Cour des comptes)</h3>
+          <ul>
+            <li><strong>Sous-consommation</strong> de crédits, reportés d'une année sur l'autre.</li>
+            <li><strong>Opacité territoriale</strong>&nbsp;: l'APA transite par les départements, sans bilan consolidé national.</li>
+            <li><strong>Effet de substitution</strong>&nbsp;: des financements remplacent des dépenses déjà dues par l'État ou les départements.</li>
+            <li>Depuis 2021, les euros de la journée de solidarité sont <strong>fondus</strong> dans un panier de recettes&nbsp;: leur traçabilité séparée n'existe plus.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Promesse vs réalité -->
+    <section class="section" id="promesse">
+      <div class="wrap">
+        <h2>Promesse de 2004 vs réalité de 2026</h2>
+        <p>
+          La loi de 2004 prévoyait une enveloppe de 20 millions d'euros pour qu'au moins une
+          pièce commune soit rafraîchie dans chaque EHPAD (art. D.312-161 CASF). Elle n'a jamais
+          promis la climatisation des chambres.
+        </p>
+        <div class="stat-grid" id="promesse-stats"><!-- rempli par JS --></div>
+        <h3>Surmortalité estivale (décès attribués à la chaleur)</h3>
+        <div id="bar-surmortalite" class="chart chart-short" role="img" aria-label="Surmortalité estivale par année"></div>
+        <p class="caption">Pour mémoire&nbsp;: la canicule de 2003 a causé près de 15 000 décès.</p>
+      </div>
+    </section>
+
+    <!-- 7. Analyses -->
+    <section class="section analyses" id="analyses">
+      <div class="wrap">
+        <div class="analyses-banner">
+          <strong>Section « Analyses »</strong> — opinions et interprétations, distinctes des
+          données factuelles ci-dessus.
+        </div>
+        <h2>Lectures &amp; débats</h2>
+
+        <div class="callout reconcile">
+          <h3>50, 62 milliards… quel est le bon chiffre ?</h3>
+          <p id="reconcile-text"></p>
+        </div>
+
+        <div id="analyses-list"><!-- rempli par JS --></div>
+      </div>
+    </section>
+
+    <!-- 8. Sources -->
+    <section class="section alt" id="sources">
+      <div class="wrap">
+        <h2>Sources &amp; méthodologie</h2>
+        <p>
+          Toutes les valeurs chiffrées du site proviennent du fichier de données ouvert
+          <code>data/donnees.json</code>. Chaque montant porte un identifiant de source
+          (ci-dessous) et un statut de fiabilité. Les chiffres marqués
+          <span class="badge a_confirmer">à confirmer</span> sont des ordres de grandeur en
+          attente de vérification sur source primaire&nbsp;: ils ne sont jamais présentés comme
+          des faits établis.
+        </p>
+        <p class="caption">Dernière mise à jour des données&nbsp;: <span id="maj"></span>.</p>
+        <ol id="sources-list" class="sources-list"><!-- rempli par JS --></ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>
+        Projet citoyen, ouvert et non partisan. Les données sont librement réutilisables
+        (citez la source d'origine). Contributions et corrections bienvenues.
+      </p>
+      <p class="small">
+        Ce site agrège des données publiques (CNSA, Assemblée nationale, Cour des comptes,
+        Santé publique France, presse spécialisée). Il ne représente aucune institution.
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/vendor/echarts.min.js"></script>
+  <script src="assets/app.js"></script>
+  <script src="assets/charts.js"></script>
+</body>
+</html>
