@@ -3,7 +3,7 @@
     "titre": "Où est passé l'argent de la journée de solidarité ?",
     "derniere_maj": "2026-06-29",
     "devise": "EUR",
-    "note": "Chaque chiffre porte une source et un statut. Statuts : 'confirme' (chiffre publié par une source officielle), 'estime' (reconstitué par recoupement ou projection officielle), 'a_confirmer' (ordre de grandeur, à vérifier sur source primaire). Les montants sont en euros."
+    "note": "Chaque chiffre porte une source et un statut. Statuts : 'confirme' (chiffre publié par une source officielle), 'estime' (reconstitué par recoupement ou projection officielle), 'a_confirmer' (ordre de grandeur, à vérifier sur source primaire). Les montants sont en euros. La série annuelle CSA/CASA suit les chiffres comptables de la CNSA (recettes propres puis recettes affectées : chiffres clés et états financiers). Deux nuances de périmètre sont signalées en note : avant la réforme 2019, la ligne CSA inclut la fraction assise sur les revenus du capital (remplacée ensuite par de la CSG) ; en 2015-2016 elle inclut une part de droits sur les tabacs. Ces éléments ne relèvent pas, au sens strict, de la seule journée de solidarité (CSA sur la masse salariale)."
   },
   "reperes": {
     "taux_csa": 0.003,
@@ -19,6 +19,9 @@
     { "id": "cnsa-20ans", "titre": "CNSA — De la journée de solidarité au Service public de l'autonomie (bilan 20 ans)", "editeur": "CNSA", "url": "https://www.cnsa.fr/presse/de-la-journee-de-solidarite-au-service-public-de-lautonomie", "consulte_le": "2026-06-29" },
     { "id": "cnsa-cc-2024", "titre": "Les chiffres clés de l'aide à l'autonomie 2024", "editeur": "CNSA", "url": "https://www.cnsa.fr/sites/default/files/2024-06/PUB-CNSA_Chiffres_cles_2024_Access-01.pdf", "consulte_le": "2026-06-29" },
     { "id": "cnsa-cc-2025", "titre": "Les chiffres clés de l'aide à l'autonomie 2025", "editeur": "CNSA", "url": "https://www.cnsa.fr/sites/default/files/2025-06/PUB-CNSA_CC25-ACCESS.pdf", "consulte_le": "2026-06-29" },
+    { "id": "cnsa-cc-2021", "titre": "Les chiffres clés de l'aide à l'autonomie 2021 (recettes propres 2006-2020 de la CNSA — séries CSA et CASA, source CNSA/PLFSS)", "editeur": "CNSA", "url": "https://www.cnsa.fr/sites/default/files/2024-02/PUB_cnsa_chiffres_cles_2021_interactif.pdf", "consulte_le": "2026-06-29" },
+    { "id": "cnsa-cc-2022", "titre": "Les chiffres clés de l'aide à l'autonomie 2022 (répartition des recettes 2021 : CSA 2 124 M€, CASA 783 M€)", "editeur": "CNSA", "url": "https://www.cnsa.fr/sites/default/files/2024-02/PUB_cnsa_chiffres_cles_2022_access_exe_corrige-071022.pdf", "consulte_le": "2026-06-29" },
+    { "id": "cnsa-annexe-2023", "titre": "Annexe aux comptes annuels 2023 — états financiers de la branche Autonomie (CSA 2 369 092 463 € et CASA 873 449 128 € en 2023 ; CSA 2 262 278 917 € et CASA 769 686 159 € en 2022)", "editeur": "CNSA", "url": "https://www.cnsa.fr/sites/default/files/2025-07/PUB-annexe-comptes-annuels-2023-vf.pdf", "consulte_le": "2026-06-29" },
     { "id": "cnsa-jds-2019", "titre": "Journée de solidarité 2019 : 2,878 milliards d'euros", "editeur": "CNSA", "url": "https://www.cnsa.fr/actualites-agenda/actualites/journee-de-solidarite-2019-2878-milliards-deuros-au-benefice-des-personnes-agees-et-des-personnes-handicapees", "consulte_le": "2026-06-29" },
     { "id": "cnsa-comptes-2024", "titre": "Conseil de la CNSA : comptes 2024 et répartition de plus de 41 milliards d'euros", "editeur": "CNSA", "url": "https://www.cnsa.fr/actualites/conseil-de-la-cnsa-adoption-des-comptes-2024-et-repartition-de-plus-de-41-milliards", "consulte_le": "2026-06-29" },
     { "id": "abaq-2018", "titre": "Collecte de la CSA et de la CASA en 2018", "editeur": "ABAQ Conseil", "url": "https://www.abaq-conseil.fr/actualites-cabinet-conseil-abaq-lyon/349-cnsa-journee-solidarite-2018.html", "consulte_le": "2026-06-29" },
@@ -47,25 +50,25 @@
   "collecte_annuelle": [
     { "annee": 2004, "csa": 900000000, "casa": 0, "total": 900000000, "statut": "a_confirmer", "source": "an-68328", "note": "Année partielle : la CSA est prélevée à partir du 1er juillet 2004 (la première journée effectivement travaillée a lieu au lundi de Pentecôte 2005). Ordre de grandeur ~ une demi-année." },
     { "annee": 2005, "csa": 1950000000, "casa": 0, "total": 1950000000, "statut": "confirme", "source": "an-68328" },
-    { "annee": 2006, "csa": 2090000000, "casa": 0, "total": 2090000000, "statut": "confirme", "source": "an-68328" },
-    { "annee": 2007, "csa": 2220000000, "casa": 0, "total": 2220000000, "statut": "confirme", "source": "an-68328" },
-    { "annee": 2008, "csa": 2290000000, "casa": 0, "total": 2290000000, "statut": "confirme", "source": "an-68328", "note": "Pic avant la baisse liée à la crise de 2009." },
-    { "annee": 2009, "csa": 2210000000, "casa": 0, "total": 2210000000, "statut": "confirme", "source": "an-68328", "note": "Recul d'environ 3,9 % lié à la crise économique." },
-    { "annee": 2010, "csa": 2240000000, "casa": 0, "total": 2240000000, "statut": "confirme", "source": "an-68328", "note": "Réparti : 1 346 M€ personnes âgées, 895 M€ personnes handicapées." },
-    { "annee": 2011, "csa": 2330000000, "casa": 0, "total": 2330000000, "statut": "estime", "source": "an-68328", "note": "Déduit du produit 2012 (2,39 Md€, en hausse de 2,4 % sur 2011)." },
-    { "annee": 2012, "csa": 2390000000, "casa": 0, "total": 2390000000, "statut": "confirme", "source": "an-68328" },
-    { "annee": 2013, "csa": 2410000000, "casa": 0, "total": 2410000000, "statut": "confirme", "source": "ash-2013", "note": "CASA créée le 1er avril 2013 mais affectée au Fonds de solidarité vieillesse (FSV) en 2013-2014, pas encore à la CNSA." },
-    { "annee": 2014, "csa": 2430000000, "casa": 0, "total": 2430000000, "statut": "confirme", "source": "capgeris-2014", "note": "Cumul 2004-2014 : 23,497 Md€ (CSA)." },
-    { "annee": 2015, "csa": 2400000000, "casa": 700000000, "total": 3100000000, "statut": "estime", "source": "cnsa-20ans", "note": "La CASA est affectée à la CNSA à partir de 2015 (auparavant FSV). CASA interpolée à partir de la série confirmée 2017-2020 (~0,74→0,82 Md€)." },
-    { "annee": 2016, "csa": 2400000000, "casa": 720000000, "total": 3120000000, "statut": "estime", "source": "silvereco-2018", "note": "CSA encadrée par 2014 (2,43) et 2017 (2,37) ; CASA interpolée." },
-    { "annee": 2017, "csa": 2370000000, "casa": 743800000, "total": 3113800000, "statut": "confirme", "source": "silvereco-2018", "note": "CSA 2,37 Md€ + CASA 743,8 M€. Cumul 2004-2017 : CSA 30 Md€, CASA 3,36 Md€." },
-    { "annee": 2018, "csa": 2420000000, "casa": 765400000, "total": 3185400000, "statut": "confirme", "source": "abaq-2018" },
-    { "annee": 2019, "csa": 2094200000, "casa": 784700000, "total": 2878900000, "statut": "confirme", "source": "cnsa-jds-2019", "note": "La CSA baisse : la réforme de la CSG (2019) remplace la fraction de CSA assise sur les revenus du patrimoine." },
-    { "annee": 2020, "csa": 2131000000, "casa": 816500000, "total": 2947500000, "statut": "confirme", "source": "cnsa-cc-2024" },
-    { "annee": 2021, "csa": 2200000000, "casa": 850000000, "total": 3050000000, "statut": "estime", "source": "cnsa-20ans", "note": "Création de la branche Autonomie : CSA et CASA fondues dans un panier de recettes (dont CSG)." },
-    { "annee": 2022, "csa": 2100000000, "casa": 900000000, "total": 3000000000, "statut": "estime", "source": "previssima-2022", "note": "Projection CNSA : « environ 3 Md€ »." },
-    { "annee": 2023, "csa": 2369000000, "casa": 873000000, "total": 3242000000, "statut": "confirme", "source": "cnsa-cc-2024", "note": "Répartition des recettes affectées 2023 de la CNSA (Chiffres clés 2024) : CSA 2 369 M€, CASA 873 M€ ; ensemble 3,24 Md€ (arrondi à 3,2 Md€ dans le bilan 20 ans)." },
-    { "annee": 2024, "csa": 2450000000, "casa": 970000000, "total": 3420000000, "statut": "confirme", "source": "aef-2024", "note": "8,2 % des recettes affectées de la branche Autonomie (≈ 41 Md€)." },
+    { "annee": 2006, "csa": 2085000000, "casa": 0, "total": 2085000000, "statut": "confirme", "source": "cnsa-cc-2021" },
+    { "annee": 2007, "csa": 2220000000, "casa": 0, "total": 2220000000, "statut": "confirme", "source": "cnsa-cc-2021" },
+    { "annee": 2008, "csa": 2296000000, "casa": 0, "total": 2296000000, "statut": "confirme", "source": "cnsa-cc-2021", "note": "Pic avant la baisse liée à la crise de 2009." },
+    { "annee": 2009, "csa": 2206000000, "casa": 0, "total": 2206000000, "statut": "confirme", "source": "cnsa-cc-2021", "note": "Recul lié à la crise économique." },
+    { "annee": 2010, "csa": 2239000000, "casa": 0, "total": 2239000000, "statut": "confirme", "source": "cnsa-cc-2021" },
+    { "annee": 2011, "csa": 2334000000, "casa": 0, "total": 2334000000, "statut": "confirme", "source": "cnsa-cc-2021" },
+    { "annee": 2012, "csa": 2389000000, "casa": 0, "total": 2389000000, "statut": "confirme", "source": "cnsa-cc-2021" },
+    { "annee": 2013, "csa": 2408000000, "casa": 479000000, "total": 2887000000, "statut": "confirme", "source": "cnsa-cc-2021", "note": "CASA créée le 1er avril 2013 (produit 479 M€) ; en 2013-2014 elle est affectée au Fonds de solidarité vieillesse (FSV) avant d'être affectée à la CNSA à partir de 2015." },
+    { "annee": 2014, "csa": 2428000000, "casa": 684000000, "total": 3112000000, "statut": "confirme", "source": "cnsa-cc-2021", "note": "Cumul CSA 2004-2014 ≈ 23,5 Md€, concordant avec le chiffrage Capgeris (23,497 Md€)." },
+    { "annee": 2015, "csa": 2468000000, "casa": 721000000, "total": 3189000000, "statut": "confirme", "source": "cnsa-cc-2021", "note": "CASA désormais affectée à la CNSA. Périmètre : la ligne CSA comptable 2015-2016 inclut une part de droits sur les tabacs (hors journée de solidarité), la CSA « masse salariale » seule étant légèrement inférieure (~2,4 Md€)." },
+    { "annee": 2016, "csa": 2513000000, "casa": 742000000, "total": 3255000000, "statut": "confirme", "source": "cnsa-cc-2021", "note": "La ligne CSA comptable inclut une part de droits sur les tabacs (hors journée de solidarité)." },
+    { "annee": 2017, "csa": 2372000000, "casa": 744000000, "total": 3116000000, "statut": "confirme", "source": "cnsa-cc-2021", "note": "Concorde avec le prévisionnel publié (CSA 2,37 Md€, CASA 743,8 M€)." },
+    { "annee": 2018, "csa": 2452000000, "casa": 772000000, "total": 3224000000, "statut": "confirme", "source": "cnsa-cc-2021", "note": "Comptable CNSA (le prévisionnel publié était CSA 2,42 Md€, CASA 765,4 M€)." },
+    { "annee": 2019, "csa": 2049000000, "casa": 762000000, "total": 2811000000, "statut": "confirme", "source": "cnsa-cc-2021", "note": "Forte baisse de la CSA : la réforme 2019 remplace la CSA assise sur les revenus du capital par de la CSG ; la CSA ne porte plus que sur la masse salariale (cœur de la journée de solidarité). Le prévisionnel annoncé par la CNSA était de 2,88 Md€ (CSA+CASA)." },
+    { "annee": 2020, "csa": 1996000000, "casa": 761000000, "total": 2757000000, "statut": "confirme", "source": "cnsa-cc-2021" },
+    { "annee": 2021, "csa": 2124000000, "casa": 783000000, "total": 2907000000, "statut": "confirme", "source": "cnsa-cc-2022", "note": "Création de la branche Autonomie : recettes regroupées dans un panier (dont CSG). Répartition des recettes 2021 de la CNSA." },
+    { "annee": 2022, "csa": 2262000000, "casa": 770000000, "total": 3032000000, "statut": "confirme", "source": "cnsa-annexe-2023", "note": "États financiers de la branche Autonomie (comparatif 2022) : CSA 2 262 278 917 €, CASA 769 686 159 €." },
+    { "annee": 2023, "csa": 2369000000, "casa": 873000000, "total": 3242000000, "statut": "confirme", "source": "cnsa-annexe-2023", "note": "États financiers de la branche Autonomie 2023 : CSA 2 369 092 463 €, CASA 873 449 128 €." },
+    { "annee": 2024, "csa": 2450000000, "casa": 970000000, "total": 3420000000, "statut": "estime", "source": "aef-2024", "note": "Prévisionnel CNSA (≈ 3,42 Md€, soit 8,2 % des recettes affectées) ; la répartition CSA/CASA est estimée, l'exécution comptable détaillée 2024 n'étant pas encore publiée." },
     { "annee": 2025, "csa": 2505000000, "casa": 978000000, "total": 3483000000, "statut": "confirme", "source": "cnsa-cc-2025", "note": "Chiffres clés CNSA 2025 (recettes affectées) : CSA 2 505 M€, CASA 978 M€ ; ensemble 3,48 Md€." },
     { "annee": 2026, "csa": 2550000000, "casa": 1020000000, "total": 3570000000, "statut": "a_confirmer", "source": "cnsa-cc-2025", "note": "Projection sur la trajectoire récente." }
   ],
@@ -134,7 +137,7 @@
     "estimation_haute": {
       "valeur_libelle": "plus de 62 Md€",
       "auteur": "Document de synthèse « Analyse sous prisme libéral » (juin 2026)",
-      "explication": "Les deux chiffres se réconcilient par le périmètre. En sommant ce tableau année par année : la CSA seule (employeurs) atteint environ 51 Md€ depuis 2004 — ce qui correspond au chiffrage officiel de la CNSA (« plus de 50 Md€ »). En ajoutant la CASA (retraités, depuis 2015), l'ensemble approche 62 Md€ — ce qui correspond à l'estimation du document. Aucun des deux n'est « faux » : ils ne comptent simplement pas la même chose. Le présent site affiche les deux, clairement étiquetés."
+      "explication": "Les deux chiffres se réconcilient par le périmètre. En sommant ce tableau année par année (chiffres comptables CNSA) : la CSA seule atteint environ 46,5 Md€ fin 2024 et 49,0 Md€ fin 2025 — l'ordre de grandeur du chiffrage officiel CNSA (« plus de 50 Md€ » sur 20 ans), atteint en intégrant 2026 (~51,6 Md€). L'écart tient au périmètre : la CNSA compte la CSA avant la réforme 2019 incluant la part assise sur les revenus du capital, qui ne relève plus de la journée de solidarité depuis. En ajoutant la CASA (retraités), l'ensemble CSA+CASA atteint ~59 Md€ fin 2025 et dépasse 62 Md€ avec 2026 — ce qui correspond à l'estimation du document. Aucun des deux n'est « faux » : ils ne comptent simplement pas la même chose. Le présent site affiche les deux, clairement étiquetés."
     },
     "lectures": [
       { "angle": "Lecture libérale (document fourni)", "points": [
