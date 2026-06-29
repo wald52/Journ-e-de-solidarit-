@@ -60,7 +60,7 @@
     { "annee": 2022, "csa": 2100000000, "casa": 900000000, "total": 3000000000, "statut": "estime", "source": "previssima-2022", "note": "Projection CNSA : « environ 3 Md€ »." },
     { "annee": 2023, "csa": 2300000000, "casa": 900000000, "total": 3200000000, "statut": "confirme", "source": "cnsa-20ans" },
     { "annee": 2024, "csa": 2450000000, "casa": 970000000, "total": 3420000000, "statut": "confirme", "source": "aef-2024", "note": "8,2 % des recettes affectées de la branche Autonomie (≈ 41 Md€)." },
-    { "annee": 2025, "csa": 2500000000, "casa": 1000000000, "total": 3500000000, "statut": "estime", "source": "cnsa-cc-2025", "note": "Recettes CNSA 2025 : CSA 2,5 Md€, CASA 1,0 Md€." },
+    { "annee": 2025, "csa": 2505000000, "casa": 978000000, "total": 3483000000, "statut": "confirme", "source": "cnsa-cc-2025", "note": "Chiffres clés CNSA 2025 (recettes affectées) : CSA 2 505 M€, CASA 978 M€ ; ensemble 3,48 Md€." },
     { "annee": 2026, "csa": 2550000000, "casa": 1020000000, "total": 3570000000, "statut": "a_confirmer", "source": "cnsa-cc-2025", "note": "Projection sur la trajectoire récente." }
   ],
   "repartition_legale": {
@@ -98,13 +98,15 @@
   "recettes_cnsa_2025": {
     "annee": 2025,
     "postes": [
-      { "nom": "CSG", "montant": 37300000000 },
-      { "nom": "CSA (journée de solidarité — employeurs)", "montant": 2500000000 },
-      { "nom": "CASA (journée de solidarité — retraités)", "montant": 1000000000 },
-      { "nom": "Taxe sur les salaires", "montant": 900000000 },
-      { "nom": "Autres recettes", "montant": 800000000 }
+      { "nom": "CSG", "montant": 37295000000 },
+      { "nom": "CSA (journée de solidarité — employeurs)", "montant": 2505000000 },
+      { "nom": "CASA (journée de solidarité — retraités)", "montant": 978000000 },
+      { "nom": "Taxe sur les salaires", "montant": 905000000 },
+      { "nom": "Taxe sur les conventions d'assurance", "montant": 130000000 },
+      { "nom": "Autres recettes affectées (compensation CSG/PSK, majorations, reprises)", "montant": 55000000 }
     ],
-    "source": "cnsa-cc-2025"
+    "source": "cnsa-cc-2025",
+    "note": "Répartition des recettes affectées 2025 de la CNSA (Chiffres clés 2025). Total des recettes affectées ≈ 41,87 Md€ ; la CSG en représente 89 %, la journée de solidarité (CSA+CASA) environ 8 %."
   },
   "promesse_vs_realite": {
     "enveloppe_climatisation_2004": 20000000,
