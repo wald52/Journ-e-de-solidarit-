@@ -1,4 +1,8 @@
 :root {
+  /* Le site est conçu pour le mode clair. On le déclare explicitement pour que
+     les navigateurs (Samsung Internet, Chrome « mode sombre forcé »…) n'appliquent
+     pas leur assombrissement automatique, qui rend le texte des graphiques illisible. */
+  color-scheme: only light;
   --bg: #ffffff;
   --bg-alt: #f4f7f9;
   --ink: #1a2733;
