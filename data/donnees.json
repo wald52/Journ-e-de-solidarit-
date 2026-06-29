@@ -22,6 +22,7 @@
     { "id": "cnsa-jds-2019", "titre": "Journée de solidarité 2019 : 2,878 milliards d'euros", "editeur": "CNSA", "url": "https://www.cnsa.fr/actualites-agenda/actualites/journee-de-solidarite-2019-2878-milliards-deuros-au-benefice-des-personnes-agees-et-des-personnes-handicapees", "consulte_le": "2026-06-29" },
     { "id": "cnsa-comptes-2024", "titre": "Conseil de la CNSA : comptes 2024 et répartition de plus de 41 milliards d'euros", "editeur": "CNSA", "url": "https://www.cnsa.fr/actualites/conseil-de-la-cnsa-adoption-des-comptes-2024-et-repartition-de-plus-de-41-milliards", "consulte_le": "2026-06-29" },
     { "id": "abaq-2018", "titre": "Collecte de la CSA et de la CASA en 2018", "editeur": "ABAQ Conseil", "url": "https://www.abaq-conseil.fr/actualites-cabinet-conseil-abaq-lyon/349-cnsa-journee-solidarite-2018.html", "consulte_le": "2026-06-29" },
+    { "id": "silvereco-2018", "titre": "La journée de solidarité 2018 devrait rapporter 2,42 Md€ (CSA), 2,37 Md€ en 2017 ; CASA 743,8 M€ (2017), 765,4 M€ (2018)", "editeur": "Silver Économie", "url": "https://www.silvereco.fr/pour-la-cnsa-la-journee-de-solidarite-2018-devrait-rapporter-242-milliards-deuros/3198719", "consulte_le": "2026-06-29" },
     { "id": "previssima-2019", "titre": "Journée de solidarité : le dispositif rapportera 2,9 Md€ en 2019", "editeur": "Previssima", "url": "https://www.previssima.fr/actualite/journee-de-solidarite-le-dispositif-rapportera-29-md-en-2019.html", "consulte_le": "2026-06-29" },
     { "id": "previssima-2022", "titre": "La journée de solidarité devrait rapporter 3 milliards d'euros en 2022", "editeur": "Previssima", "url": "https://www.previssima.fr/actualite/la-journee-de-solidarite-devrait-rapporter-3-milliards-deuros-a-la-branche-autonomie-en-2022.html", "consulte_le": "2026-06-29" },
     { "id": "ash-2013", "titre": "La journée de solidarité a rapporté 2,41 milliards d'euros en 2013", "editeur": "ASH — Actualités sociales hebdomadaires", "url": "https://www.ash.tm.fr/hebdo/2864/cote-cour/la-journee-de-solidarite-a-rapporte-241-milliards-deuros-en-2013-404627.php", "consulte_le": "2026-06-29" },
@@ -38,20 +39,20 @@
     { "id": "franceinfo-2026", "titre": "Adaptation de la France aux fortes chaleurs depuis 2003", "editeur": "Franceinfo", "url": "https://www.franceinfo.fr/", "consulte_le": "2026-06-29" }
   ],
   "collecte_annuelle": [
-    { "annee": 2004, "csa": 900000000, "casa": 0, "total": 900000000, "statut": "a_confirmer", "source": "cnsa-20ans", "note": "Année partielle : le dispositif démarre à l'été 2004. Ordre de grandeur." },
+    { "annee": 2004, "csa": 900000000, "casa": 0, "total": 900000000, "statut": "a_confirmer", "source": "an-68328", "note": "Année partielle : la CSA est prélevée à partir du 1er juillet 2004 (la première journée effectivement travaillée a lieu au lundi de Pentecôte 2005). Ordre de grandeur ~ une demi-année." },
     { "annee": 2005, "csa": 1950000000, "casa": 0, "total": 1950000000, "statut": "confirme", "source": "an-68328" },
     { "annee": 2006, "csa": 2090000000, "casa": 0, "total": 2090000000, "statut": "confirme", "source": "an-68328" },
     { "annee": 2007, "csa": 2220000000, "casa": 0, "total": 2220000000, "statut": "confirme", "source": "an-68328" },
-    { "annee": 2008, "csa": 2300000000, "casa": 0, "total": 2300000000, "statut": "estime", "source": "an-68328", "note": "Pic avant la baisse liée à la crise de 2009." },
-    { "annee": 2009, "csa": 2210000000, "casa": 0, "total": 2210000000, "statut": "estime", "source": "an-68328", "note": "Recul d'environ 3,9 % lié à la crise économique." },
+    { "annee": 2008, "csa": 2290000000, "casa": 0, "total": 2290000000, "statut": "confirme", "source": "an-68328", "note": "Pic avant la baisse liée à la crise de 2009." },
+    { "annee": 2009, "csa": 2210000000, "casa": 0, "total": 2210000000, "statut": "confirme", "source": "an-68328", "note": "Recul d'environ 3,9 % lié à la crise économique." },
     { "annee": 2010, "csa": 2240000000, "casa": 0, "total": 2240000000, "statut": "confirme", "source": "an-68328", "note": "Réparti : 1 346 M€ personnes âgées, 895 M€ personnes handicapées." },
-    { "annee": 2011, "csa": 2350000000, "casa": 0, "total": 2350000000, "statut": "a_confirmer", "source": "an-68328" },
+    { "annee": 2011, "csa": 2330000000, "casa": 0, "total": 2330000000, "statut": "estime", "source": "an-68328", "note": "Déduit du produit 2012 (2,39 Md€, en hausse de 2,4 % sur 2011)." },
     { "annee": 2012, "csa": 2390000000, "casa": 0, "total": 2390000000, "statut": "confirme", "source": "an-68328" },
     { "annee": 2013, "csa": 2410000000, "casa": 0, "total": 2410000000, "statut": "confirme", "source": "ash-2013", "note": "CASA créée le 1er avril 2013 mais affectée au Fonds de solidarité vieillesse (FSV) en 2013-2014, pas encore à la CNSA." },
     { "annee": 2014, "csa": 2430000000, "casa": 0, "total": 2430000000, "statut": "confirme", "source": "capgeris-2014", "note": "Cumul 2004-2014 : 23,497 Md€ (CSA)." },
-    { "annee": 2015, "csa": 2400000000, "casa": 1000000000, "total": 3400000000, "statut": "estime", "source": "cnsa-20ans", "note": "La CASA est affectée à la CNSA à partir de 2015." },
-    { "annee": 2016, "csa": 2410000000, "casa": 740000000, "total": 3150000000, "statut": "a_confirmer", "source": "cnsa-20ans" },
-    { "annee": 2017, "csa": 2420000000, "casa": 750000000, "total": 3170000000, "statut": "a_confirmer", "source": "cnsa-20ans" },
+    { "annee": 2015, "csa": 2400000000, "casa": 700000000, "total": 3100000000, "statut": "estime", "source": "cnsa-20ans", "note": "La CASA est affectée à la CNSA à partir de 2015 (auparavant FSV). CASA interpolée à partir de la série confirmée 2017-2020 (~0,74→0,82 Md€)." },
+    { "annee": 2016, "csa": 2400000000, "casa": 720000000, "total": 3120000000, "statut": "estime", "source": "silvereco-2018", "note": "CSA encadrée par 2014 (2,43) et 2017 (2,37) ; CASA interpolée." },
+    { "annee": 2017, "csa": 2370000000, "casa": 743800000, "total": 3113800000, "statut": "confirme", "source": "silvereco-2018", "note": "CSA 2,37 Md€ + CASA 743,8 M€. Cumul 2004-2017 : CSA 30 Md€, CASA 3,36 Md€." },
     { "annee": 2018, "csa": 2420000000, "casa": 765400000, "total": 3185400000, "statut": "confirme", "source": "abaq-2018" },
     { "annee": 2019, "csa": 2094200000, "casa": 784700000, "total": 2878900000, "statut": "confirme", "source": "cnsa-jds-2019", "note": "La CSA baisse : la réforme de la CSG (2019) remplace la fraction de CSA assise sur les revenus du patrimoine." },
     { "annee": 2020, "csa": 2131000000, "casa": 816500000, "total": 2947500000, "statut": "confirme", "source": "cnsa-cc-2024" },
@@ -123,7 +124,7 @@
     "estimation_haute": {
       "valeur_libelle": "plus de 62 Md€",
       "auteur": "Document de synthèse « Analyse sous prisme libéral » (juin 2026)",
-      "explication": "Les deux chiffres se réconcilient par le périmètre. En sommant ce tableau année par année : la CSA seule (employeurs) atteint environ 51,7 Md€ depuis 2004 — ce qui correspond au chiffrage officiel de la CNSA (« plus de 50 Md€ »). En ajoutant la CASA (retraités, depuis 2015), l'ensemble atteint environ 62 Md€ — ce qui correspond à l'estimation du document. Aucun des deux n'est « faux » : ils ne comptent simplement pas la même chose. Le présent site affiche les deux, clairement étiquetés."
+      "explication": "Les deux chiffres se réconcilient par le périmètre. En sommant ce tableau année par année : la CSA seule (employeurs) atteint environ 51 Md€ depuis 2004 — ce qui correspond au chiffrage officiel de la CNSA (« plus de 50 Md€ »). En ajoutant la CASA (retraités, depuis 2015), l'ensemble approche 62 Md€ — ce qui correspond à l'estimation du document. Aucun des deux n'est « faux » : ils ne comptent simplement pas la même chose. Le présent site affiche les deux, clairement étiquetés."
     },
     "lectures": [
       { "angle": "Lecture libérale (document fourni)", "points": [
