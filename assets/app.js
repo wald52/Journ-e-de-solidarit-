@@ -96,8 +96,8 @@ function renderRepartition() {
 function renderPromesse() {
   const pr = DATA.promesse_vs_realite;
   const stats = [
-    { big: fmtPct(pr.chambres_non_climatisees_pct_2026), desc: 'des chambres individuelles d\'EHPAD non climatisées en 2026' },
-    { big: fmtEuro(pr.enveloppe_climatisation_2004), desc: 'enveloppe « climatisation » prévue par la loi de 2004 (une pièce rafraîchie par établissement)' },
+    { big: fmtPct(pr.chambres_non_climatisees_pct), desc: 'des EHPAD sans chambre climatisée (enquête FNADEPA 2023)' },
+    { big: '1', desc: 'pièce rafraîchie par établissement : c\'est le minimum exigé par la loi (art. D.312-161 CASF), pas la climatisation des chambres' },
     { big: '≈ 15 000', desc: 'décès lors de la canicule de 2003 (déclencheur du dispositif)' }
   ];
   document.getElementById('promesse-stats').innerHTML = stats

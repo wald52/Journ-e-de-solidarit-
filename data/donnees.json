@@ -12,8 +12,7 @@
     "heures_travaillees": 7,
     "cumul_officiel_min": 50000000000,
     "cumul_officiel_libelle": "« plus de 50 milliards d'euros » (chiffrage CNSA, 20 ans du dispositif)",
-    "enveloppe_climatisation_2004": 20000000,
-    "chambres_ehpad_non_climatisees_2026": 0.91
+    "chambres_ehpad_non_climatisees_2023": 0.914
   },
   "sources": [
     { "id": "cnsa-20ans", "titre": "CNSA — De la journée de solidarité au Service public de l'autonomie (bilan 20 ans)", "editeur": "CNSA", "url": "https://www.cnsa.fr/presse/de-la-journee-de-solidarite-au-service-public-de-lautonomie", "consulte_le": "2026-06-29" },
@@ -22,6 +21,7 @@
     { "id": "cnsa-cc-2021", "titre": "Les chiffres clés de l'aide à l'autonomie 2021 (recettes propres 2006-2020 de la CNSA — séries CSA et CASA, source CNSA/PLFSS)", "editeur": "CNSA", "url": "https://www.cnsa.fr/sites/default/files/2024-02/PUB_cnsa_chiffres_cles_2021_interactif.pdf", "consulte_le": "2026-06-29" },
     { "id": "cnsa-cc-2022", "titre": "Les chiffres clés de l'aide à l'autonomie 2022 (répartition des recettes 2021 : CSA 2 124 M€, CASA 783 M€)", "editeur": "CNSA", "url": "https://www.cnsa.fr/sites/default/files/2024-02/PUB_cnsa_chiffres_cles_2022_access_exe_corrige-071022.pdf", "consulte_le": "2026-06-29" },
     { "id": "cnsa-annexe-2023", "titre": "Annexe aux comptes annuels 2023 — états financiers de la branche Autonomie (CSA 2 369 092 463 € et CASA 873 449 128 € en 2023 ; CSA 2 262 278 917 € et CASA 769 686 159 € en 2022)", "editeur": "CNSA", "url": "https://www.cnsa.fr/sites/default/files/2025-07/PUB-annexe-comptes-annuels-2023-vf.pdf", "consulte_le": "2026-06-29" },
+    { "id": "ccss-2025", "titre": "Rapport à la Commission des comptes de la Sécurité sociale — résultats 2024, prévisions 2025 et 2026 (octobre 2025). Séries CSA et CASA brutes : 2024 = 2 468 / 913 M€ ; 2025 = 2 518 / 950 M€ ; 2026 = 2 562 / 977 M€", "editeur": "Commission des comptes de la Sécurité sociale (securite-sociale.fr)", "url": "https://www.securite-sociale.fr/files/live/sites/SSFR/files/CCSS-octobre%202025.pdf", "consulte_le": "2026-06-29" },
     { "id": "cnsa-jds-2019", "titre": "Journée de solidarité 2019 : 2,878 milliards d'euros", "editeur": "CNSA", "url": "https://www.cnsa.fr/actualites-agenda/actualites/journee-de-solidarite-2019-2878-milliards-deuros-au-benefice-des-personnes-agees-et-des-personnes-handicapees", "consulte_le": "2026-06-29" },
     { "id": "cnsa-comptes-2024", "titre": "Conseil de la CNSA : comptes 2024 et répartition de plus de 41 milliards d'euros", "editeur": "CNSA", "url": "https://www.cnsa.fr/actualites/conseil-de-la-cnsa-adoption-des-comptes-2024-et-repartition-de-plus-de-41-milliards", "consulte_le": "2026-06-29" },
     { "id": "abaq-2018", "titre": "Collecte de la CSA et de la CASA en 2018", "editeur": "ABAQ Conseil", "url": "https://www.abaq-conseil.fr/actualites-cabinet-conseil-abaq-lyon/349-cnsa-journee-solidarite-2018.html", "consulte_le": "2026-06-29" },
@@ -45,11 +45,11 @@
     { "id": "spf-2025-bilan", "titre": "Chaleur et santé — bilan de l'été 2025 (plus de 5 700 décès attribuables, plus de 1 900 pendant les épisodes de canicule)", "editeur": "Santé publique France", "url": "https://invs.santepubliquefrance.fr/climat/fortes-chaleurs-canicule/bulletin-national/chaleur-et-sante-bilan-de-lete-2025", "consulte_le": "2026-06-29" },
     { "id": "courdescomptes-2023", "titre": "Rapport sur la branche Autonomie (écarts budget/exécution, opacité territoriale)", "editeur": "Cour des comptes", "url": "https://www.ccomptes.fr/fr/publications/la-branche-autonomie", "consulte_le": "2026-06-29" },
     { "id": "libault-2019", "titre": "Rapport Libault — Concertation Grand Âge et Autonomie", "editeur": "Ministère des Solidarités", "url": "https://sante.gouv.fr/IMG/pdf/rapport_grand_age_autonomie.pdf", "consulte_le": "2026-06-29" },
-    { "id": "franceinfo-2026", "titre": "Adaptation de la France aux fortes chaleurs depuis 2003", "editeur": "Franceinfo", "url": "https://www.franceinfo.fr/", "consulte_le": "2026-06-29" }
+    { "id": "franceinfo-2026", "titre": "Adaptation de la France aux fortes chaleurs depuis 2003", "editeur": "Franceinfo", "url": "https://www.franceinfo.fr/", "consulte_le": "2026-06-29" },
+    { "id": "fnadepa-2023", "titre": "Enquête FNADEPA 2023 : 91,4 % des EHPAD n'ont pas de chambres climatisées", "editeur": "FNADEPA (Fédération nationale des associations de directeurs d'établissements et services pour personnes âgées)", "url": "https://www.fnadepa.com/", "consulte_le": "2026-06-29" }
   ],
   "collecte_annuelle": [
-    { "annee": 2004, "csa": 900000000, "casa": 0, "total": 900000000, "statut": "a_confirmer", "source": "an-68328", "note": "Année partielle : la CSA est prélevée à partir du 1er juillet 2004 (la première journée effectivement travaillée a lieu au lundi de Pentecôte 2005). Ordre de grandeur ~ une demi-année." },
-    { "annee": 2005, "csa": 1950000000, "casa": 0, "total": 1950000000, "statut": "confirme", "source": "an-68328" },
+    { "annee": 2005, "csa": 1950000000, "casa": 0, "total": 1950000000, "statut": "confirme", "source": "an-68328", "note": "Première année de la série officielle continue (question écrite AN n°68328). La CSA est prélevée depuis le 1er juillet 2004, mais aucun produit 2004 consolidé n'est publié séparément : l'année de mise en place 2004 n'est donc pas reportée." },
     { "annee": 2006, "csa": 2085000000, "casa": 0, "total": 2085000000, "statut": "confirme", "source": "cnsa-cc-2021" },
     { "annee": 2007, "csa": 2220000000, "casa": 0, "total": 2220000000, "statut": "confirme", "source": "cnsa-cc-2021" },
     { "annee": 2008, "csa": 2296000000, "casa": 0, "total": 2296000000, "statut": "confirme", "source": "cnsa-cc-2021", "note": "Pic avant la baisse liée à la crise de 2009." },
@@ -68,12 +68,13 @@
     { "annee": 2021, "csa": 2124000000, "casa": 783000000, "total": 2907000000, "statut": "confirme", "source": "cnsa-cc-2022", "note": "Création de la branche Autonomie : recettes regroupées dans un panier (dont CSG). Répartition des recettes 2021 de la CNSA." },
     { "annee": 2022, "csa": 2262000000, "casa": 770000000, "total": 3032000000, "statut": "confirme", "source": "cnsa-annexe-2023", "note": "États financiers de la branche Autonomie (comparatif 2022) : CSA 2 262 278 917 €, CASA 769 686 159 €." },
     { "annee": 2023, "csa": 2369000000, "casa": 873000000, "total": 3242000000, "statut": "confirme", "source": "cnsa-annexe-2023", "note": "États financiers de la branche Autonomie 2023 : CSA 2 369 092 463 €, CASA 873 449 128 €." },
-    { "annee": 2024, "csa": 2450000000, "casa": 970000000, "total": 3420000000, "statut": "estime", "source": "aef-2024", "note": "Prévisionnel CNSA (≈ 3,42 Md€, soit 8,2 % des recettes affectées) ; la répartition CSA/CASA est estimée, l'exécution comptable détaillée 2024 n'étant pas encore publiée." },
-    { "annee": 2025, "csa": 2505000000, "casa": 978000000, "total": 3483000000, "statut": "confirme", "source": "cnsa-cc-2025", "note": "Chiffres clés CNSA 2025 (recettes affectées) : CSA 2 505 M€, CASA 978 M€ ; ensemble 3,48 Md€." },
-    { "annee": 2026, "csa": 2550000000, "casa": 1020000000, "total": 3570000000, "statut": "a_confirmer", "source": "cnsa-cc-2025", "note": "Projection sur la trajectoire récente." }
+    { "annee": 2024, "csa": 2468000000, "casa": 913000000, "total": 3381000000, "statut": "confirme", "source": "ccss-2025", "note": "Résultats 2024 (semi-définitifs), rapport à la Commission des comptes de la Sécurité sociale d'octobre 2025 : CSA brute 2 468 M€, CASA brute 913 M€." },
+    { "annee": 2025, "csa": 2505000000, "casa": 978000000, "total": 3483000000, "statut": "confirme", "source": "cnsa-cc-2025", "note": "Chiffres clés CNSA 2025 (recettes affectées) : CSA 2 505 M€, CASA 978 M€ ; ensemble 3,48 Md€. La prévision CCSS d'octobre 2025 donne un montant voisin (CSA 2 518, CASA 950)." },
+    { "annee": 2026, "csa": 2562000000, "casa": 977000000, "total": 3539000000, "statut": "estime", "source": "ccss-2025", "note": "Prévision officielle (loi de financement de la Sécurité sociale) : rapport à la Commission des comptes de la Sécurité sociale d'octobre 2025, prévisions 2026 : CSA 2 562 M€, CASA 977 M€. Montant prévisionnel non encore exécuté." }
   ],
   "repartition_legale": {
-    "intitule": "Clé de répartition légale du produit de la CSA (art. L.14-10-5 CASF)",
+    "intitule": "Répartition du produit de la CSA entre personnes âgées (60 %) et personnes handicapées (40 %) — la part de 40 % affectée au handicap est fixée par l'article L.14-10-5 du CASF.",
+    "note": "Seule la clé 60 % / 40 % (personnes âgées / personnes handicapées) est une obligation légale (art. L.14-10-5 CASF, part handicap = 40 %). La ventilation fine par poste (APA, PCH, ESMS, investissement) est indicative : elle reflète la destination des fonds via les anciennes sections de la CNSA, avant la mise en place de la branche Autonomie en 2021 qui a regroupé les recettes dans un budget unique.",
     "groupes": [
       { "groupe": "Personnes âgées", "part": 0.60, "couleur": "#1f6f8b",
         "postes": [
@@ -118,8 +119,8 @@
     "note": "Répartition des recettes affectées 2025 de la CNSA (Chiffres clés 2025). Total des recettes affectées ≈ 41,87 Md€ ; la CSG en représente 89 %, la journée de solidarité (CSA+CASA) environ 8 %."
   },
   "promesse_vs_realite": {
-    "enveloppe_climatisation_2004": 20000000,
-    "chambres_non_climatisees_pct_2026": 0.91,
+    "chambres_non_climatisees_pct": 0.914,
+    "chambres_non_climatisees_source": "fnadepa-2023",
     "obligation_legale": "Au moins une pièce rafraîchie par établissement (art. D.312-161 CASF), pas la climatisation des chambres.",
     "surmortalite_estivale": [
       { "annee": 2019, "deces": 1435, "source": "spf-2019", "note": "Excès de mortalité observé pendant les 2 vagues de chaleur (juin-juillet 2019)." },
@@ -137,7 +138,7 @@
     "estimation_haute": {
       "valeur_libelle": "plus de 62 Md€",
       "auteur": "Document de synthèse « Analyse sous prisme libéral » (juin 2026)",
-      "explication": "Les deux chiffres se réconcilient par le périmètre. En sommant ce tableau année par année (chiffres comptables CNSA) : la CSA seule atteint environ 46,5 Md€ fin 2024 et 49,0 Md€ fin 2025 — l'ordre de grandeur du chiffrage officiel CNSA (« plus de 50 Md€ » sur 20 ans), atteint en intégrant 2026 (~51,6 Md€). L'écart tient au périmètre : la CNSA compte la CSA avant la réforme 2019 incluant la part assise sur les revenus du capital, qui ne relève plus de la journée de solidarité depuis. En ajoutant la CASA (retraités), l'ensemble CSA+CASA atteint ~59 Md€ fin 2025 et dépasse 62 Md€ avec 2026 — ce qui correspond à l'estimation du document. Aucun des deux n'est « faux » : ils ne comptent simplement pas la même chose. Le présent site affiche les deux, clairement étiquetés."
+      "explication": "Les deux chiffres se réconcilient par le périmètre. En sommant ce tableau année par année (chiffres officiels CNSA et CCSS) : la CSA seule atteint environ 45,6 Md€ fin 2024 et 48,1 Md€ fin 2025, et franchit les 50 Md€ en 2026 (50,7 Md€ avec la prévision de la loi de financement) — l'ordre de grandeur du chiffrage officiel CNSA (« plus de 50 Md€ » sur 20 ans). L'écart de quelques milliards tient au périmètre : la CNSA compte la CSA d'avant la réforme 2019 incluant la part assise sur les revenus du capital, qui ne relève plus de la journée de solidarité depuis. En ajoutant la CASA (retraités), l'ensemble CSA+CASA atteint ~58 Md€ fin 2025 et dépasse 61 Md€ avec 2026 — ce qui correspond à l'estimation du document. Aucun des deux n'est « faux » : ils ne comptent simplement pas la même chose. Le présent site affiche les deux, clairement étiquetés."
     },
     "lectures": [
       { "angle": "Lecture libérale (document fourni)", "points": [
