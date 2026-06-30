@@ -134,6 +134,17 @@ function renderClimatisation() {
   }).join('');
   const box = document.getElementById('clim-reperes');
   if (box) box.innerHTML = reperes;
+
+  const h = c.hopitaux;
+  const hbox = document.getElementById('clim-hopitaux');
+  if (h && hbox) {
+    const srcs = (h.sources || []).map(sourceLink).join(' · ');
+    hbox.innerHTML = `<h3>Et les hôpitaux&nbsp;?</h3>
+      <p>${esc(h.constat)}</p>
+      <p>${esc(h.reglementation)}</p>
+      <p>${esc(h.mesures_2026)}</p>
+      <p class="src caption">Sources&nbsp;: ${srcs}</p>`;
+  }
 }
 
 /* ---------- 7. analyses ---------- */
