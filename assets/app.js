@@ -31,10 +31,10 @@ function renderCounters() {
   const annees = last.annee - DATA.reperes.annee_creation + 1;
 
   const items = [
-    { num: '≈ ' + fmtEuro(cumulCsa), lbl: 'CSA (employeurs) cumulée depuis 2004' },
-    { num: '≈ ' + fmtEuro(cumulTotal), lbl: 'CSA + CASA cumulées (2004–' + last.annee + ')' },
+    { num: '≈ ' + fmtEuro(cumulCsa), lbl: 'CSA (employeurs) cumulée (' + ca[0].annee + '–' + last.annee + ')' },
+    { num: '≈ ' + fmtEuro(cumulTotal), lbl: 'CSA + CASA cumulées (' + ca[0].annee + '–' + last.annee + ')' },
     { num: fmtEuro(last.total), lbl: 'produit ' + last.annee + ' (' + statutLabel[last.statut] + ')' },
-    { num: fmtPct(DATA.reperes.taux_csa), lbl: 'de la masse salariale (taux CSA)' },
+    { num: (DATA.reperes.taux_csa * 100).toLocaleString('fr-FR', { minimumFractionDigits: 2 }) + ' %', lbl: 'de la masse salariale (taux CSA)' },
     { num: annees + ' ans', lbl: "d'existence du dispositif" }
   ];
   document.getElementById('counters').innerHTML = items

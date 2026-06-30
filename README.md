@@ -14,10 +14,12 @@ prélèvements affectés à la **CNSA** (Caisse nationale de solidarité pour l'
 - **CASA** — 0,30 % sur les pensions imposables des retraités (depuis 2013, versée à la
   CNSA à partir de 2015).
 
-En cumulé depuis 2004, la CSA seule représente **« plus de 50 Md€ »** (chiffrage CNSA) ;
-CSA + CASA dépassent **60 Md€**. Pourtant, en 2026, **91 % des chambres d'EHPAD ne sont
-toujours pas climatisées** et la surmortalité estivale persiste. Le site présente les
-faits, leurs sources, et — dans une section distincte — les analyses et débats.
+En cumulé (chiffres comptables CNSA/CCSS), la CSA seule atteint environ **49 Md€ fin 2025**
+et franchit les **50 Md€** en 2026 — conforme au chiffrage CNSA « plus de 50 Md€ sur 20 ans » ;
+**CSA + CASA** approchent **59 Md€ fin 2025** et dépassent **61 Md€** avec 2026. Pourtant, selon
+l'enquête **FNADEPA 2023**, **91,4 % des EHPAD n'ont aucune chambre climatisée**, et la
+surmortalité estivale persiste. Le site présente les faits, leurs sources, et — dans une
+section distincte — les analyses et débats.
 
 ## Structure du projet
 
@@ -26,7 +28,7 @@ index.html            page unique (sections ancrées)
 assets/
   style.css           mise en forme
   app.js              chargement des données + rendu (compteurs, tableau, sources…)
-  charts.js           graphiques ECharts (Sankey, histogrammes)
+  charts.js           graphiques ECharts (Sankey, histogrammes, surmortalité, climatisation)
 data/
   donnees.json        SOURCE UNIQUE DE VÉRITÉ : tous les chiffres + leurs sources
   donnees.csv         export plat des collectes annuelles
@@ -65,6 +67,12 @@ Chaque valeur de `data/donnees.json` porte :
 Les chiffres `a_confirmer` ne sont jamais présentés comme des faits établis (badge visible
 dans l'interface). Mettre à jour le site = éditer `donnees.json` (puis régénérer le CSV).
 
+À ce jour, la série annuelle de collecte est presque entièrement au statut `confirme`
+(sources CNSA, CCSS, états financiers de la branche Autonomie). Seule l'année 2026 reste
+`estime`, car c'est une prévision officielle (loi de financement / CCSS) non encore exécutée.
+La section « Climatisation des EHPAD » s'appuie sur l'enquête EHPA de la DREES, l'enquête
+FNADEPA et des rapports IGAS / Cour des comptes.
+
 ### Régénérer le CSV depuis le JSON
 
 ```bash
@@ -89,9 +97,10 @@ PY
 
 ## Contribuer
 
-Corrections de chiffres, ajout de sources primaires (notamment pour les années
-`a_confirmer`), améliorations d'accessibilité : les contributions sont bienvenues.
-Indiquez toujours la source de chaque chiffre modifié.
+Corrections de chiffres, ajout de sources primaires (notamment l'exécution comptable
+définitive de 2024-2026 quand elle paraîtra, ou un taux national de climatisation des
+EHPAD/hôpitaux s'il devient public), améliorations d'accessibilité : les contributions
+sont bienvenues. Indiquez toujours la source de chaque chiffre modifié.
 
 ## Avertissement
 

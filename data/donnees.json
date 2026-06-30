@@ -1,7 +1,7 @@
 {
   "meta": {
     "titre": "Où est passé l'argent de la journée de solidarité ?",
-    "derniere_maj": "2026-06-29",
+    "derniere_maj": "2026-06-30",
     "devise": "EUR",
     "note": "Chaque chiffre porte une source et un statut. Statuts : 'confirme' (chiffre publié par une source officielle), 'estime' (reconstitué par recoupement ou projection officielle), 'a_confirmer' (ordre de grandeur, à vérifier sur source primaire). Les montants sont en euros. La série annuelle CSA/CASA suit les chiffres comptables de la CNSA (recettes propres puis recettes affectées : chiffres clés et états financiers). Deux nuances de périmètre sont signalées en note : avant la réforme 2019, la ligne CSA inclut la fraction assise sur les revenus du capital (remplacée ensuite par de la CSG) ; en 2015-2016 elle inclut une part de droits sur les tabacs. Ces éléments ne relèvent pas, au sens strict, de la seule journée de solidarité (CSA sur la masse salariale)."
   },
