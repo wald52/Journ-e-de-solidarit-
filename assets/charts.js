@@ -2,7 +2,7 @@
    surmortalité estivale. Se déclenche sur l'événement 'data-ready' émis par app.js. */
 
 (function () {
-  let sankeyChart, barChart, mortChart;
+  let sankeyChart, barChart, mortChart, climChart;
   const COL = { pa: '#1f6f8b', ph: '#e08e0b', cnsa: '#14506a', src: '#3a8fa8' };
 
   const fmtMd = (v) => (v / 1e9).toLocaleString('fr-FR', { maximumFractionDigits: 2 }) + ' Md€';
@@ -147,9 +147,38 @@
     });
   }
 
+  /* ---------- Climatisation des EHPAD (2019, par statut) ---------- */
+  function initClim() {
+    const D = window.DATA;
+    const el = document.getElementById('bar-climatisation');
+    if (!el || !D.climatisation_ehpad) return;
+    const pts = D.climatisation_ehpad.points.filter((p) => p.annee === 2019 && p.par_statut);
+    const chambres = pts.find((p) => /privatif|chambre/i.test(p.indicateur));
+    const collectifs = pts.find((p) => /collectif/i.test(p.indicateur));
+    if (!chambres || !collectifs) return;
+    const statuts = [['public', 'Public'], ['prive_non_lucratif', 'Privé non lucratif'], ['prive_lucratif', 'Privé lucratif']];
+    const pc = (o) => statuts.map((s) => +(o.par_statut[s[0]] * 100).toFixed(1));
+    climChart = echarts.init(el);
+    climChart.setOption({
+      tooltip: {
+        trigger: 'axis', axisPointer: { type: 'shadow' },
+        formatter: (ps) => '<b>' + ps[0].name + '</b><br/>' +
+          ps.map((p) => p.marker + p.seriesName + ' : ' + p.value.toLocaleString('fr-FR') + ' %').join('<br/>')
+      },
+      legend: { data: ['Chambres climatisées', 'Espaces collectifs climatisés'], top: 0 },
+      grid: { left: 40, right: 16, top: 40, bottom: 30 },
+      xAxis: { type: 'category', data: statuts.map((s) => s[1]) },
+      yAxis: { type: 'value', name: '%', max: 100, axisLabel: { formatter: '{value}' } },
+      series: [
+        { name: 'Chambres climatisées', type: 'bar', data: pc(chambres), barWidth: '32%', itemStyle: { color: '#b3261e' } },
+        { name: 'Espaces collectifs climatisés', type: 'bar', data: pc(collectifs), barWidth: '32%', itemStyle: { color: '#1f6f8b' } }
+      ]
+    });
+  }
+
   /* ---------- resize ---------- */
   function onResize() {
-    [sankeyChart, barChart, mortChart].forEach((c) => c && c.resize());
+    [sankeyChart, barChart, mortChart, climChart].forEach((c) => c && c.resize());
   }
 
   document.addEventListener('data-ready', function () {
@@ -161,6 +190,7 @@
     initSankey();
     initBar();
     initMort();
+    initClim();
     window.addEventListener('resize', onResize);
   });
 })();

@@ -105,6 +105,37 @@ function renderPromesse() {
     .join('');
 }
 
+/* ---------- 6 bis. climatisation EHPAD ---------- */
+function renderClimatisation() {
+  const c = DATA.climatisation_ehpad;
+  if (!c) return;
+  const pct1 = (v) => (v * 100).toLocaleString('fr-FR', { maximumFractionDigits: 1 }) + ' %';
+  const intro = document.getElementById('clim-intro');
+  if (intro) intro.textContent = c.meilleur_indicateur;
+  const lim = document.getElementById('clim-limites');
+  if (lim) lim.textContent = c.limites;
+
+  const STAT = { public: 'public', prive_non_lucratif: 'privé non lucratif', prive_lucratif: 'privé lucratif' };
+  const reperes = (c.points || []).map((p) => {
+    let val;
+    if (typeof p.valeur === 'number') {
+      val = pct1(p.valeur);
+    } else if (p.par_statut) {
+      const vals = Object.values(p.par_statut);
+      val = pct1(Math.min(...vals)) + ' → ' + pct1(Math.max(...vals));
+    } else {
+      val = '';
+    }
+    return `<div class="bar-row">
+        <div class="bar-label"><strong>${p.annee}</strong> — ${esc(p.indicateur)}
+          <span class="src">(${sourceLink(p.source)})</span></div>
+        <div class="bar-val">${esc(val)}</div>
+      </div>`;
+  }).join('');
+  const box = document.getElementById('clim-reperes');
+  if (box) box.innerHTML = reperes;
+}
+
 /* ---------- 7. analyses ---------- */
 function renderAnalyses() {
   const a = DATA.analyses;
@@ -159,6 +190,7 @@ async function boot() {
   renderTable();
   renderRepartition();
   renderPromesse();
+  renderClimatisation();
   renderAnalyses();
   renderSources();
   initNav();

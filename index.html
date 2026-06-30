@@ -23,6 +23,7 @@
         <li><a href="#annees">Année par année</a></li>
         <li><a href="#ou-va">Où va l'argent</a></li>
         <li><a href="#promesse">Promesse vs réalité</a></li>
+        <li><a href="#climatisation">Climatisation</a></li>
         <li><a href="#analyses">Analyses</a></li>
         <li><a href="#sources">Sources</a></li>
       </ul>
@@ -151,7 +152,7 @@
             <div id="repartition" class="bars-stack"><!-- rempli par JS --></div>
           </div>
           <div>
-            <h3>Budget de la branche Autonomie (2024)</h3>
+            <h3>Budget de la branche Autonomie (2025)</h3>
             <div id="budget" class="bars-stack"><!-- rempli par JS --></div>
           </div>
         </div>
@@ -172,14 +173,33 @@
       <div class="wrap">
         <h2>Promesse de 2004 vs réalité de 2026</h2>
         <p>
-          La loi de 2004 prévoyait une enveloppe de 20 millions d'euros pour qu'au moins une
-          pièce commune soit rafraîchie dans chaque EHPAD (art. D.312-161 CASF). Elle n'a jamais
-          promis la climatisation des chambres.
+          La loi de 2004 a créé la contribution, mais n'a jamais promis la climatisation des
+          chambres&nbsp;: l'obligation réglementaire se limite à <strong>au moins une pièce
+          rafraîchie</strong> par établissement (art. D.312-161 CASF).
         </p>
         <div class="stat-grid" id="promesse-stats"><!-- rempli par JS --></div>
         <h3>Surmortalité estivale (décès attribués à la chaleur)</h3>
         <div id="bar-surmortalite" class="chart chart-short" role="img" aria-label="Surmortalité estivale par année"></div>
         <p class="caption">Pour mémoire&nbsp;: la canicule de 2003 a causé près de 15 000 décès.</p>
+      </div>
+    </section>
+
+    <!-- 6 bis. Climatisation des EHPAD -->
+    <section class="section alt" id="climatisation">
+      <div class="wrap">
+        <h2>Climatisation des EHPAD : 20 ans après la canicule</h2>
+        <p id="clim-intro"></p>
+        <div class="two-col">
+          <div>
+            <h3>En 2019, part des EHPAD climatisés (par statut)</h3>
+            <div id="bar-climatisation" class="chart chart-short" role="img" aria-label="Part des EHPAD dont les chambres ou les espaces collectifs sont climatisés en 2019, selon le statut"></div>
+          </div>
+          <div>
+            <h3>Repères dans le temps</h3>
+            <div id="clim-reperes" class="bars-stack"><!-- rempli par JS --></div>
+          </div>
+        </div>
+        <p class="caption" id="clim-limites"></p>
       </div>
     </section>
 
