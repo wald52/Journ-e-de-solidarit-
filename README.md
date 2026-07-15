@@ -31,7 +31,10 @@ assets/
   charts.js           graphiques ECharts (Sankey, histogrammes, surmortalité, climatisation)
 data/
   donnees.json        SOURCE UNIQUE DE VÉRITÉ : tous les chiffres + leurs sources
-  donnees.csv         export plat des collectes annuelles
+  donnees.csv         export plat des collectes annuelles (généré depuis le JSON)
+scripts/
+  validate-data.mjs   contrôle d'intégrité des données (utilisé par la CI)
+  build-csv.mjs       régénère donnees.csv à partir de donnees.json
 ```
 
 Aucun build, aucune dépendance à installer : du HTML/CSS/JS statique. La seule
@@ -73,19 +76,23 @@ dans l'interface). Mettre à jour le site = éditer `donnees.json` (puis régén
 La section « Climatisation des EHPAD » s'appuie sur l'enquête EHPA de la DREES, l'enquête
 FNADEPA et des rapports IGAS / Cour des comptes.
 
-### Régénérer le CSV depuis le JSON
+### Valider et régénérer les données
+
+Deux scripts Node (sans dépendance à installer) sécurisent les données :
 
 ```bash
-python3 - <<'PY'
-import json, csv
-d = json.load(open('data/donnees.json'))
-with open('data/donnees.csv', 'w', newline='', encoding='utf-8') as f:
-    w = csv.writer(f)
-    w.writerow(['annee','csa_eur','casa_eur','total_eur','statut','source_id'])
-    for x in d['collecte_annuelle']:
-        w.writerow([x['annee'], x['csa'], x['casa'], x['total'], x['statut'], x['source']])
-PY
+npm run validate    # contrôle d'intégrité (échoue si une incohérence est trouvée)
+npm run build:csv   # régénère data/donnees.csv depuis data/donnees.json
 ```
+
+`npm run validate` vérifie notamment que `total = CSA + CASA` pour chaque année,
+que chaque `source` référencée existe, que les statuts sont valides, que la clé
+de répartition somme à 100 %, et que le CSV committé est bien à jour vis-à-vis du
+JSON. Ces contrôles tournent aussi automatiquement en intégration continue
+(`.github/workflows/ci.yml`) à chaque push et pull request.
+
+Après toute modification de `data/donnees.json`, lancez `npm run build:csv` puis
+committez le CSV régénéré.
 
 ## Principes éditoriaux
 

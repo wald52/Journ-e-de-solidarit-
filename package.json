@@ -1,0 +1,13 @@
+{
+  "name": "journee-de-solidarite",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site citoyen : combien rapporte la journée de solidarité en France, et où va l'argent. Données sourcées.",
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate-data.mjs",
+    "build:csv": "node scripts/build-csv.mjs",
+    "serve": "python3 -m http.server 8000"
+  },
+  "license": "MIT"
+}
