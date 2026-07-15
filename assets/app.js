@@ -92,6 +92,32 @@ function renderRepartition() {
     `<p class="caption" style="margin-top:8px">Total branche Autonomie ${b.annee} : ${fmtEuro(b.total)}. ${esc(b.note)}</p>`;
 }
 
+/* ---------- 5 bis. d'où viennent les recettes de la branche ---------- */
+function renderRecettes() {
+  const r = DATA.recettes_cnsa_2025;
+  if (!r) return;
+  const total = r.postes.reduce((a, p) => a + p.montant, 0);
+  // On met en surbrillance les recettes de la journée de solidarité (CSA/CASA).
+  const isJds = (nom) => /CSA|CASA/.test(nom);
+  const html = r.postes
+    .map((p) => {
+      const part = p.montant / total;
+      const color = isJds(p.nom) ? '#e08e0b' : '#9aaab5';
+      const label = fmtEuro(p.montant) + ' · ' + fmtPct(part);
+      return bar(p.nom, p.montant, label, p.montant / total, color);
+    })
+    .join('');
+  document.getElementById('recettes').innerHTML =
+    html + `<p class="caption" style="margin-top:8px">Total des recettes affectées ${r.annee} : ${fmtEuro(total)}. ${esc(r.note)} (${sourceLink(r.source)})</p>`;
+
+  // Pilote les pourcentages annoncés dans le chapeau (plutôt que des chiffres en dur).
+  const csg = r.postes.find((p) => /^CSG/.test(p.nom));
+  const jds = r.postes.filter((p) => isJds(p.nom)).reduce((a, p) => a + p.montant, 0);
+  const setPct = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = '~' + fmtPct(v); };
+  if (csg) setPct('csg-part', csg.montant / total);
+  setPct('jds-part', jds / total);
+}
+
 /* ---------- 6. stats promesse ---------- */
 function renderPromesse() {
   const pr = DATA.promesse_vs_realite;
@@ -200,6 +226,7 @@ async function boot() {
   renderCounters();
   renderTable();
   renderRepartition();
+  renderRecettes();
   renderPromesse();
   renderClimatisation();
   renderAnalyses();
