@@ -181,16 +181,29 @@
     [sankeyChart, barChart, mortChart, climChart].forEach((c) => c && c.resize());
   }
 
+  /* Initialise un graphe la première fois que son conteneur approche du viewport
+     (économise le coût de rendu au chargement). Repli : init immédiate si
+     IntersectionObserver est indisponible. */
+  function initWhenVisible(elementId, init) {
+    const el = document.getElementById(elementId);
+    if (!el) return;
+    if (!('IntersectionObserver' in window)) { init(); return; }
+    const io = new IntersectionObserver((entries, obs) => {
+      if (entries.some((e) => e.isIntersecting)) { obs.disconnect(); init(); }
+    }, { rootMargin: '200px' });
+    io.observe(el);
+  }
+
   document.addEventListener('data-ready', function () {
     if (typeof echarts === 'undefined') {
       document.getElementById('sankey').innerHTML =
-        '<p style="padding:20px;color:#b3261e">La librairie de graphiques (ECharts) n\'a pas pu être chargée depuis le CDN.</p>';
+        '<p style="padding:20px;color:#b3261e">La librairie de graphiques (ECharts) n\'a pas pu être chargée.</p>';
       return;
     }
-    initSankey();
-    initBar();
-    initMort();
-    initClim();
+    initWhenVisible('sankey', initSankey);
+    initWhenVisible('bar-collecte', initBar);
+    initWhenVisible('bar-surmortalite', initMort);
+    initWhenVisible('bar-climatisation', initClim);
     window.addEventListener('resize', onResize);
   });
 })();
