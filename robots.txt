@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wald52.github.io/journ-e-de-solidarit-/sitemap.xml

@@ -109,6 +109,12 @@ définitive de 2024-2026 quand elle paraîtra, ou un taux national de climatisat
 EHPAD/hôpitaux s'il devient public), améliorations d'accessibilité : les contributions
 sont bienvenues. Indiquez toujours la source de chaque chiffre modifié.
 
+## Licence
+
+- **Code** (HTML, CSS, JS, scripts) : licence **MIT** (voir `LICENSE`).
+- **Données** (`data/donnees.json`, `data/donnees.csv`) : **Licence Ouverte /
+  Open Licence 2.0** (Etalab). Citez toujours la source d'origine de chaque chiffre.
+
 ## Avertissement
 
 Projet citoyen indépendant. Il agrège des données publiques et ne représente aucune
