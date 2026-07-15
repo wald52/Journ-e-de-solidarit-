@@ -145,6 +145,9 @@
       yAxis: { type: 'value', name: 'décès' },
       series: [{ type: 'bar', data: sm.map((x) => x.deces), barWidth: '50%', itemStyle: { color: '#b3261e' } }]
     });
+    srTable(el, 'Surmortalité estivale par année',
+      ['Année', 'Décès attribués à la chaleur'],
+      sm.map((x) => [x.annee, x.deces.toLocaleString('fr-FR')]));
   }
 
   /* ---------- Climatisation des EHPAD (2019, par statut) ---------- */
@@ -174,6 +177,23 @@
         { name: 'Espaces collectifs climatisés', type: 'bar', data: pc(collectifs), barWidth: '32%', itemStyle: { color: '#1f6f8b' } }
       ]
     });
+    const ch = pc(chambres), co = pc(collectifs);
+    srTable(el, 'Part des EHPAD climatisés en 2019, par statut',
+      ['Statut', 'Chambres climatisées', 'Espaces collectifs climatisés'],
+      statuts.map((s, i) => [s[1], ch[i] + ' %', co[i] + ' %']));
+  }
+
+  /* ---------- équivalent textuel (lecteurs d'écran + impression) ---------- */
+  // Insère un tableau visuellement masqué juste après un graphe canvas, pour
+  // rendre ses données accessibles aux technologies d'assistance.
+  function srTable(afterEl, caption, headers, rows) {
+    if (afterEl.nextElementSibling && afterEl.nextElementSibling.classList.contains('sr-only')) return;
+    const div = document.createElement('div');
+    div.className = 'sr-only';
+    const thead = '<tr>' + headers.map((h) => `<th scope="col">${h}</th>`).join('') + '</tr>';
+    const tbody = rows.map((r) => '<tr>' + r.map((c) => `<td>${c}</td>`).join('') + '</tr>').join('');
+    div.innerHTML = `<table><caption>${caption}</caption><thead>${thead}</thead><tbody>${tbody}</tbody></table>`;
+    afterEl.insertAdjacentElement('afterend', div);
   }
 
   /* ---------- resize ---------- */
@@ -181,17 +201,34 @@
     [sankeyChart, barChart, mortChart, climChart].forEach((c) => c && c.resize());
   }
 
+  /* Chaque graphe n'est initialisé qu'une fois. */
+  const started = new Set();
+  function start(id, init) {
+    if (started.has(id)) return;
+    started.add(id);
+    init();
+  }
+
   /* Initialise un graphe la première fois que son conteneur approche du viewport
      (économise le coût de rendu au chargement). Repli : init immédiate si
      IntersectionObserver est indisponible. */
-  function initWhenVisible(elementId, init) {
-    const el = document.getElementById(elementId);
+  function initWhenVisible(id, init) {
+    const el = document.getElementById(id);
     if (!el) return;
-    if (!('IntersectionObserver' in window)) { init(); return; }
+    if (!('IntersectionObserver' in window)) { start(id, init); return; }
     const io = new IntersectionObserver((entries, obs) => {
-      if (entries.some((e) => e.isIntersecting)) { obs.disconnect(); init(); }
+      if (entries.some((e) => e.isIntersecting)) { obs.disconnect(); start(id, init); }
     }, { rootMargin: '200px' });
     io.observe(el);
+  }
+
+  // Force l'initialisation de tous les graphes (utile avant impression : sans
+  // cela, un graphe jamais scrollé s'imprimerait vide).
+  function initAll() {
+    start('sankey', initSankey);
+    start('bar-collecte', initBar);
+    start('bar-surmortalite', initMort);
+    start('bar-climatisation', initClim);
   }
 
   document.addEventListener('data-ready', function () {
@@ -205,5 +242,6 @@
     initWhenVisible('bar-surmortalite', initMort);
     initWhenVisible('bar-climatisation', initClim);
     window.addEventListener('resize', onResize);
+    window.addEventListener('beforeprint', function () { initAll(); onResize(); });
   });
 })();

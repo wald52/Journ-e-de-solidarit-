@@ -172,3 +172,31 @@ tbody tr:hover { background: #f0f6f8; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
+/* Contenu réservé aux technologies d'assistance (lecteurs d'écran).
+   Utilisé pour les équivalents textuels des graphiques ECharts (canvas), qui ne
+   sont pas lisibles autrement. */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Impression : document citoyen sobre et lisible (PDF). */
+@media print {
+  :root { --wrap: 100%; }
+  body { color: #000; background: #fff; }
+  .skip-link, .site-header, .nav-toggle, .chart-controls { display: none !important; }
+  .section, .hero { padding: 14px 0 !important; }
+  .section.alt, .analyses, .hero { background: #fff !important; }
+  .wrap { max-width: 100%; padding: 0 12mm; }
+  a { color: #000; text-decoration: underline; }
+  .card, .callout, .counter, .analyse-block, .chart, .stat, .bar-row, table { break-inside: avoid; }
+  h1, h2, h3 { break-after: avoid; }
+  .site-footer { background: #fff !important; color: #000; border-top: 1px solid #ccc; }
+  .site-footer a, .site-footer .small { color: #000; }
+}
