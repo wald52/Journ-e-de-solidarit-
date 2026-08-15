@@ -7,7 +7,7 @@ on:
 
 jobs:
   validate:
-    name: Valider les données
+    name: Valider les données et la PWA
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -21,3 +21,12 @@ jobs:
           node scripts/build-csv.mjs
           git diff --exit-code data/donnees.csv \
             || (echo "::error::data/donnees.csv est désynchronisé — lancez 'npm run build:csv' et committez." && exit 1)
+      - name: Syntaxe du service worker et du bootstrap PWA
+        run: |
+          node --check sw.js
+          node --check assets/pwa.js
+      - name: Manifeste PWA et icônes requises
+        run: |
+          node -e "JSON.parse(require('fs').readFileSync('manifest.webmanifest', 'utf8'))"
+          test -f assets/icons/icon-192.png
+          test -f assets/icons/icon-512.png
