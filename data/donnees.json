@@ -1,9 +1,9 @@
 {
   "meta": {
     "titre": "Où est passé l'argent de la journée de solidarité ?",
-    "derniere_maj": "2026-06-30",
+    "derniere_maj": "2026-08-15",
     "devise": "EUR",
-    "note": "Chaque chiffre porte une source et un statut. Statuts : 'confirme' (chiffre publié par une source officielle), 'estime' (reconstitué par recoupement ou projection officielle), 'a_confirmer' (ordre de grandeur, à vérifier sur source primaire). Les montants sont en euros. La série annuelle CSA/CASA suit les chiffres comptables de la CNSA (recettes propres puis recettes affectées : chiffres clés et états financiers). Deux nuances de périmètre sont signalées en note : avant la réforme 2019, la ligne CSA inclut la fraction assise sur les revenus du capital (remplacée ensuite par de la CSG) ; en 2015-2016 elle inclut une part de droits sur les tabacs. Ces éléments ne relèvent pas, au sens strict, de la seule journée de solidarité (CSA sur la masse salariale)."
+    "note": "Chaque chiffre porte une source et un statut. Statuts : 'confirme' (chiffre publié par une source officielle), 'estime' (prévision officielle ou projection), 'a_confirmer' (ordre de grandeur restant à vérifier). Les montants sont en euros. La série CSA/CASA suit les chiffres comptables publiés par la CNSA ; 2004 est une année partielle de mise en place. Avant 2019, la ligne comptable CSA a un périmètre plus large que la seule CSA sur salaires, notamment une fraction assise sur les revenus du capital ; en 2015-2016 elle inclut aussi une part de droits sur les tabacs."
   },
   "reperes": {
     "taux_csa": 0.003,
@@ -15,89 +15,75 @@
     "chambres_ehpad_non_climatisees_2023": 0.914
   },
   "sources": [
-    { "id": "cnsa-20ans", "titre": "CNSA — De la journée de solidarité au Service public de l'autonomie (bilan 20 ans)", "editeur": "CNSA", "url": "https://www.cnsa.fr/presse/de-la-journee-de-solidarite-au-service-public-de-lautonomie", "consulte_le": "2026-06-29" },
-    { "id": "cnsa-cc-2024", "titre": "Les chiffres clés de l'aide à l'autonomie 2024", "editeur": "CNSA", "url": "https://www.cnsa.fr/sites/default/files/2024-06/PUB-CNSA_Chiffres_cles_2024_Access-01.pdf", "consulte_le": "2026-06-29" },
-    { "id": "cnsa-cc-2025", "titre": "Les chiffres clés de l'aide à l'autonomie 2025", "editeur": "CNSA", "url": "https://www.cnsa.fr/sites/default/files/2025-06/PUB-CNSA_CC25-ACCESS.pdf", "consulte_le": "2026-06-29" },
-    { "id": "cnsa-cc-2021", "titre": "Les chiffres clés de l'aide à l'autonomie 2021 (recettes propres 2006-2020 de la CNSA — séries CSA et CASA, source CNSA/PLFSS)", "editeur": "CNSA", "url": "https://www.cnsa.fr/sites/default/files/2024-02/PUB_cnsa_chiffres_cles_2021_interactif.pdf", "consulte_le": "2026-06-29" },
-    { "id": "cnsa-cc-2022", "titre": "Les chiffres clés de l'aide à l'autonomie 2022 (répartition des recettes 2021 : CSA 2 124 M€, CASA 783 M€)", "editeur": "CNSA", "url": "https://www.cnsa.fr/sites/default/files/2024-02/PUB_cnsa_chiffres_cles_2022_access_exe_corrige-071022.pdf", "consulte_le": "2026-06-29" },
-    { "id": "cnsa-annexe-2023", "titre": "Annexe aux comptes annuels 2023 — états financiers de la branche Autonomie (CSA 2 369 092 463 € et CASA 873 449 128 € en 2023 ; CSA 2 262 278 917 € et CASA 769 686 159 € en 2022)", "editeur": "CNSA", "url": "https://www.cnsa.fr/sites/default/files/2025-07/PUB-annexe-comptes-annuels-2023-vf.pdf", "consulte_le": "2026-06-29" },
-    { "id": "ccss-2025", "titre": "Rapport à la Commission des comptes de la Sécurité sociale — résultats 2024, prévisions 2025 et 2026 (octobre 2025). Séries CSA et CASA brutes : 2024 = 2 468 / 913 M€ ; 2025 = 2 518 / 950 M€ ; 2026 = 2 562 / 977 M€", "editeur": "Commission des comptes de la Sécurité sociale (securite-sociale.fr)", "url": "https://www.securite-sociale.fr/files/live/sites/SSFR/files/CCSS-octobre%202025.pdf", "consulte_le": "2026-06-29" },
-    { "id": "cnsa-jds-2019", "titre": "Journée de solidarité 2019 : 2,878 milliards d'euros", "editeur": "CNSA", "url": "https://www.cnsa.fr/actualites-agenda/actualites/journee-de-solidarite-2019-2878-milliards-deuros-au-benefice-des-personnes-agees-et-des-personnes-handicapees", "consulte_le": "2026-06-29" },
-    { "id": "cnsa-comptes-2024", "titre": "Conseil de la CNSA : comptes 2024 et répartition de plus de 41 milliards d'euros", "editeur": "CNSA", "url": "https://www.cnsa.fr/actualites/conseil-de-la-cnsa-adoption-des-comptes-2024-et-repartition-de-plus-de-41-milliards", "consulte_le": "2026-06-29" },
-    { "id": "abaq-2018", "titre": "Collecte de la CSA et de la CASA en 2018", "editeur": "ABAQ Conseil", "url": "https://www.abaq-conseil.fr/actualites-cabinet-conseil-abaq-lyon/349-cnsa-journee-solidarite-2018.html", "consulte_le": "2026-06-29" },
-    { "id": "silvereco-2018", "titre": "La journée de solidarité 2018 devrait rapporter 2,42 Md€ (CSA), 2,37 Md€ en 2017 ; CASA 743,8 M€ (2017), 765,4 M€ (2018)", "editeur": "Silver Économie", "url": "https://www.silvereco.fr/pour-la-cnsa-la-journee-de-solidarite-2018-devrait-rapporter-242-milliards-deuros/3198719", "consulte_le": "2026-06-29" },
-    { "id": "previssima-2019", "titre": "Journée de solidarité : le dispositif rapportera 2,9 Md€ en 2019", "editeur": "Previssima", "url": "https://www.previssima.fr/actualite/journee-de-solidarite-le-dispositif-rapportera-29-md-en-2019.html", "consulte_le": "2026-06-29" },
-    { "id": "previssima-2022", "titre": "La journée de solidarité devrait rapporter 3 milliards d'euros en 2022", "editeur": "Previssima", "url": "https://www.previssima.fr/actualite/la-journee-de-solidarite-devrait-rapporter-3-milliards-deuros-a-la-branche-autonomie-en-2022.html", "consulte_le": "2026-06-29" },
-    { "id": "ash-2013", "titre": "La journée de solidarité a rapporté 2,41 milliards d'euros en 2013", "editeur": "ASH — Actualités sociales hebdomadaires", "url": "https://www.ash.tm.fr/hebdo/2864/cote-cour/la-journee-de-solidarite-a-rapporte-241-milliards-deuros-en-2013-404627.php", "consulte_le": "2026-06-29" },
-    { "id": "capgeris-2014", "titre": "Journée de solidarité — 23 milliards d'euros collectés entre 2004 et 2014", "editeur": "Capgeris", "url": "https://www.capgeris.com/dependance-et-5eme-risque-1681/journee-de-solidarite-23-milliards-d-euros-collectes-entre-2004-et-2014-a30713.htm", "consulte_le": "2026-06-29" },
-    { "id": "aef-2024", "titre": "La journée de solidarité va rapporter 3,42 milliards d'euros pour 2024 (CNSA)", "editeur": "AEF info", "url": "https://www.aefinfo.fr/depeche/712060", "consulte_le": "2026-06-29" },
-    { "id": "an-68328", "titre": "Question écrite n°68328 — journée de solidarité (montants annuels)", "editeur": "Assemblée nationale", "url": "https://www.assemblee-nationale.fr/dyn/13/questions/QANR5L13QE68328", "consulte_le": "2026-06-29" },
-    { "id": "service-public-csa", "titre": "Contribution solidarité autonomie (CSA)", "editeur": "Service-public / Code du travail numérique", "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F32872", "consulte_le": "2026-06-29" },
-    { "id": "casf-l14105", "titre": "Article L.14-10-5 du Code de l'action sociale et des familles (clé de répartition)", "editeur": "Légifrance", "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037961356", "consulte_le": "2026-06-29" },
-    { "id": "casf-d312161", "titre": "Article D.312-161 CASF — pièce rafraîchie en EHPAD", "editeur": "Légifrance", "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074069/LEGISCTA000006196481", "consulte_le": "2026-06-29" },
-    { "id": "loi-2004-626", "titre": "Loi n°2004-626 du 30 juin 2004 (solidarité pour l'autonomie)", "editeur": "Légifrance / JORF", "url": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000622485", "consulte_le": "2026-06-29" },
-    { "id": "spf-canicule", "titre": "Bilans de surmortalité estivale / plan canicule", "editeur": "Santé publique France", "url": "https://www.santepubliquefrance.fr/determinants-de-sante/climat/fortes-chaleurs-canicule", "consulte_le": "2026-06-29" },
-    { "id": "spf-2019", "titre": "Système d'alerte canicule et santé — bilan de mortalité des épisodes de chaleur de juin et juillet 2019 (1 435 décès en excès)", "editeur": "Santé publique France", "url": "https://www.santepubliquefrance.fr/climat/fortes-chaleurs-canicule/bulletin-national/systeme-dalerte-canicule-et-sante-bilan-de-mortalite-des-episodes-de-chaleur-de-juin-et-juillet-2019", "consulte_le": "2026-06-29" },
-    { "id": "spf-2020", "titre": "Bulletin de santé publique canicule — bilan été 2020 (1 924 décès en excès pendant les vagues de chaleur)", "editeur": "Santé publique France", "url": "https://www.santepubliquefrance.fr/determinants-de-sante/climat/fortes-chaleurs-canicule/documents/bulletin-national/bulletin-de-sante-publique-canicule.-bilan-ete-2020", "consulte_le": "2026-06-29" },
-    { "id": "spf-2022", "titre": "Bilan canicule et santé été 2022 (2 816 décès en excès pendant les vagues, 10 420 sur l'été)", "editeur": "Santé publique France", "url": "https://www.santepubliquefrance.fr/presse/2022/bilan-canicule-et-sante-un-ete-marque-par-des-phenomenes-climatiques-multiples-et-un-impact-sanitaire-important", "consulte_le": "2026-06-29" },
-    { "id": "spf-2023", "titre": "Bulletin de santé publique — bilan canicule été 2023 (plus de 1 500 décès attribuables pendant les épisodes, plus de 5 000 sur l'été)", "editeur": "Santé publique France", "url": "https://www.santepubliquefrance.fr/sites/default/files/rdd/document/BSP_Bilan_Canicule_2023_NAT_BAT.pdf", "consulte_le": "2026-06-29" },
-    { "id": "spf-2024", "titre": "Mortalité liée à la chaleur, été 2024 (plus de 3 700 décès attribuables, plus de 600 pendant les épisodes de canicule)", "editeur": "Sénat (réponse citant Santé publique France) / Vie publique", "url": "https://www.senat.fr/questions/base/2025/qSEQ250404263.html", "consulte_le": "2026-06-29" },
-    { "id": "spf-2025-bilan", "titre": "Chaleur et santé — bilan de l'été 2025 (plus de 5 700 décès attribuables, plus de 1 900 pendant les épisodes de canicule)", "editeur": "Santé publique France", "url": "https://invs.santepubliquefrance.fr/climat/fortes-chaleurs-canicule/bulletin-national/chaleur-et-sante-bilan-de-lete-2025", "consulte_le": "2026-06-29" },
-    { "id": "courdescomptes-2023", "titre": "Rapport sur la branche Autonomie (écarts budget/exécution, opacité territoriale)", "editeur": "Cour des comptes", "url": "https://www.ccomptes.fr/fr/publications/la-branche-autonomie", "consulte_le": "2026-06-29" },
-    { "id": "libault-2019", "titre": "Rapport Libault — Concertation Grand Âge et Autonomie", "editeur": "Ministère des Solidarités", "url": "https://sante.gouv.fr/IMG/pdf/rapport_grand_age_autonomie.pdf", "consulte_le": "2026-06-29" },
-    { "id": "franceinfo-2026", "titre": "Adaptation de la France aux fortes chaleurs depuis 2003", "editeur": "Franceinfo", "url": "https://www.franceinfo.fr/", "consulte_le": "2026-06-29" },
-    { "id": "fnadepa-2023", "titre": "Enquête FNADEPA 2023 (Fédération nationale des associations de directeurs d'établissements et services pour personnes âgées) : 91,4 % des EHPAD n'ont pas de chambres climatisées", "editeur": "FNADEPA", "url": "https://www.fnadepa.com/", "consulte_le": "2026-06-29" },
-    { "id": "drees-ehpa-2003", "titre": "Les établissements d'hébergement pour personnes âgées en 2003 : locaux et équipements (Études et résultats n°380) — 19 % des établissements climatisés dans au moins un espace collectif", "editeur": "DREES", "url": "https://drees.solidarites-sante.gouv.fr/etudes-et-statistiques/publications/etudes-et-resultats/article/les-etablissements-d-hebergement-pour-personnes-agees-en-2003-locaux-et", "consulte_le": "2026-06-29" },
-    { "id": "senat-ehpad-2024", "titre": "Rapport d'information Sénat n°778 (2023-2024) sur la situation des EHPAD — caractéristiques de confort du bâti en 2019 (espaces privatifs et collectifs climatisés), d'après l'enquête EHPA 2019 de la DREES", "editeur": "Sénat", "url": "https://www.senat.fr/rap/r23-778/r23-778.pdf", "consulte_le": "2026-06-29" },
-    { "id": "drees-ehpa", "titre": "Enquête EHPA (établissements d'hébergement pour personnes âgées) — enquête quadriennale de référence sur le bâti et les équipements (dont climatisation)", "editeur": "DREES", "url": "https://drees.solidarites-sante.gouv.fr/sources-outils-et-enquetes/07-lenquete-aupres-des-etablissements-dhebergement-pour-personnes-agees", "consulte_le": "2026-06-29" },
-    { "id": "ccomptes-hopitaux", "titre": "La situation financière des hôpitaux publics (vétusté du parc passée de 46 % en 2010 à 50,5 % en 2018, investissement hospitalier divisé par deux entre 2009 et 2019 ; aucune étude nationale sur la résilience estivale du parc immobilier)", "editeur": "Cour des comptes", "url": "https://www.ccomptes.fr/sites/default/files/2023-10/20231012-situation-financiere-des-hopitaux.pdf", "consulte_le": "2026-06-30" },
-    { "id": "gouv-clim-2026", "titre": "Canicule de juin 2026 : commande gouvernementale en urgence de 30 000 climatiseurs pour les hôpitaux (enveloppe de 100 M€)", "editeur": "Gouvernement (via CNews)", "url": "https://www.cnews.fr/france/2026-06-27/canicule-combien-la-commande-de-30000-climatiseurs-pour-les-hopitaux-va-t-elle", "consulte_le": "2026-06-30" },
-    { "id": "igas-transition-2024", "titre": "Transition énergétique des établissements sanitaires et médico-sociaux (rapport IGAS n°2023-102R, 2024) — vétusté des hôpitaux publics 55,2 % (2021) puis 58,8 % (2022) ; sur les CHU, seules 24 % des surfaces conformes/acceptables en performance énergétique (~70 % nécessiteraient une isolation) ; le Tableau de bord ANAP/ATIH des ESMS intègre depuis 2022 un indicateur de présence d'un système de rafraîchissement", "editeur": "IGAS", "url": "https://igas.gouv.fr/sites/igas/files/2024-07/Transition%20%C3%A9nerg%C3%A9tique%20(rapport).pdf", "consulte_le": "2026-06-30" }
+    { "id": "cnsa-20ans", "titre": "De la journée de solidarité au Service public de l'autonomie — bilan des 20 ans", "editeur": "CNSA", "url": "https://www.cnsa.fr/presse/de-la-journee-de-solidarite-au-service-public-de-lautonomie", "consulte_le": "2026-08-15" },
+    { "id": "cnsa-cc-2021", "titre": "Les chiffres clés de l'aide à l'autonomie 2021 — série historique CSA/CASA", "editeur": "CNSA", "url": "https://www.cnsa.fr/sites/default/files/2024-02/PUB_cnsa_chiffres_cles_2021_interactif.pdf", "consulte_le": "2026-08-15" },
+    { "id": "cnsa-cc-2022", "titre": "Les chiffres clés de l'aide à l'autonomie 2022 — recettes 2021", "editeur": "CNSA", "url": "https://www.cnsa.fr/sites/default/files/2024-02/PUB_cnsa_chiffres_cles_2022_access_exe_corrige-071022.pdf", "consulte_le": "2026-08-15" },
+    { "id": "cnsa-cc-2025", "titre": "Les chiffres clés de l'aide à l'autonomie 2025 — budget rectificatif et structure des recettes", "editeur": "CNSA", "url": "https://www.cnsa.fr/sites/default/files/2025-06/PUB-CNSA_CC25-ACCESS.pdf", "consulte_le": "2026-08-15" },
+    { "id": "cnsa-cc-2026", "titre": "Les chiffres clés de l'aide à l'autonomie 2026 — prévisions CSA et CASA 2026", "editeur": "CNSA", "url": "https://www.cnsa.fr/sites/default/files/2026-06/PUB-CNSA-CC2026-WEB-ACCESS.pdf", "consulte_le": "2026-08-15" },
+    { "id": "cnsa-annexe-2023", "titre": "Annexe aux comptes annuels 2023 — CSA et CASA 2022-2023", "editeur": "CNSA", "url": "https://www.cnsa.fr/sites/default/files/2025-07/PUB-annexe-comptes-annuels-2023-vf.pdf", "consulte_le": "2026-08-15" },
+    { "id": "cnsa-annexe-2025", "titre": "Annexe aux comptes annuels 2025 — comptes certifiés de la branche Autonomie", "editeur": "CNSA", "url": "https://www.cnsa.fr/sites/default/files/2026-06/PUB-annexe-comptes-annuels-2025-vf.pdf", "consulte_le": "2026-08-15" },
+    { "id": "an-qe-2695", "titre": "Question écrite n°2695 — produit annuel de la contribution solidarité autonomie, dont 2004 et 2005", "editeur": "Assemblée nationale", "url": "https://www.assemblee-nationale.fr/dyn/16/questions/QANR5L16QE2695", "consulte_le": "2026-08-15" },
+    { "id": "service-public-csa", "titre": "Contribution solidarité autonomie (CSA) — taux de 0,30 %", "editeur": "Service-public", "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F32872", "consulte_le": "2026-08-15" },
+    { "id": "casf-l14105-historique", "titre": "Ancienne version de l'article L.14-10-5 du CASF — organisation historique en sections", "editeur": "Légifrance", "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037961356", "consulte_le": "2026-08-15" },
+    { "id": "casf-l14105-actuel", "titre": "Article L.14-10-5 du CASF en vigueur — branche Autonomie", "editeur": "Légifrance", "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045061654", "consulte_le": "2026-08-15" },
+    { "id": "casf-d312161", "titre": "Article D.312-161 du CASF — pièce rafraîchie en établissement", "editeur": "Légifrance", "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074069/LEGISCTA000006196481", "consulte_le": "2026-08-15" },
+    { "id": "loi-2004-626", "titre": "Loi n° 2004-626 du 30 juin 2004 relative à la solidarité pour l'autonomie", "editeur": "Légifrance", "url": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000622485", "consulte_le": "2026-08-15" },
+    { "id": "spf-2019", "titre": "Système d'alerte canicule et santé — bilan final des épisodes de juin et juillet 2019 (1 462 décès en excès)", "editeur": "Santé publique France", "url": "https://www.santepubliquefrance.fr/climat/fortes-chaleurs-canicule/bulletin-national/systeme-d-alerte-canicule-et-sante-bilan-de-mortalite-des-episodes-de-chaleur-de-juin-et-juillet-2019", "consulte_le": "2026-08-15" },
+    { "id": "spf-2020", "titre": "Bulletin de santé publique canicule — bilan été 2020", "editeur": "Santé publique France", "url": "https://www.santepubliquefrance.fr/climat/fortes-chaleurs-canicule/bulletin-national/bulletin-de-sante-publique-canicule-bilan-ete-2020", "consulte_le": "2026-08-15" },
+    { "id": "spf-2022", "titre": "Bilan canicule et santé été 2022", "editeur": "Santé publique France", "url": "https://www.santepubliquefrance.fr/presse/2022/bilan-canicule-et-sante-un-ete-marque-par-des-phenomenes-climatiques-multiples-et-un-impact-sanitaire-important", "consulte_le": "2026-08-15" },
+    { "id": "spf-2023", "titre": "Bilan canicule été 2023 — mortalité attribuable à la chaleur", "editeur": "Santé publique France", "url": "https://www.santepubliquefrance.fr/sites/default/files/rdd/document/BSP_Bilan_Canicule_2023_NAT_BAT.pdf", "consulte_le": "2026-08-15" },
+    { "id": "spf-2024", "titre": "Mortalité liée à la chaleur, été 2024 — réponse officielle citant Santé publique France", "editeur": "Sénat", "url": "https://www.senat.fr/questions/base/2025/qSEQ250404263.html", "consulte_le": "2026-08-15" },
+    { "id": "spf-2025-bilan", "titre": "Chaleur et santé — bilan de l'été 2025", "editeur": "Santé publique France", "url": "https://www.santepubliquefrance.fr/climat/fortes-chaleurs-canicule/bulletin-national/chaleur-et-sante-bilan-de-l-ete-2025", "consulte_le": "2026-08-15" },
+    { "id": "fnadepa-2023", "titre": "Enquête FNADEPA 2023 sur l'adaptation aux vagues de chaleur — résultats détaillés relayés par ASH", "editeur": "FNADEPA / ASH", "url": "https://www.ash.tm.fr/autonomie/adaptation-des-essms-aux-vagues-de-chaleur-les-chiffres-clefs-pour-le-grand-age-786145.php", "consulte_le": "2026-08-15" },
+    { "id": "drees-ehpa-2003", "titre": "Les établissements d'hébergement pour personnes âgées en 2003 : locaux et équipements", "editeur": "DREES", "url": "https://drees.solidarites-sante.gouv.fr/etudes-et-statistiques/publications/etudes-et-resultats/article/les-etablissements-d-hebergement-pour-personnes-agees-en-2003-locaux-et", "consulte_le": "2026-08-15" },
+    { "id": "senat-ehpad-2024", "titre": "Rapport d'information n°778 sur la situation des EHPAD — données EHPA 2019", "editeur": "Sénat", "url": "https://www.senat.fr/rap/r23-778/r23-778.pdf", "consulte_le": "2026-08-15" },
+    { "id": "drees-ehpa-2023", "titre": "Enquête EHPA 2023 — données sur le bâti, la configuration et les équipements", "editeur": "DREES", "url": "https://drees.solidarites-sante.gouv.fr/jeux-de-donnees/jeux-de-donnees/les-residents-en-etablissements-dhebergement-pour-personnes-agees", "consulte_le": "2026-08-15" },
+    { "id": "courdescomptes-2023", "titre": "La branche Autonomie", "editeur": "Cour des comptes", "url": "https://www.ccomptes.fr/fr/publications/la-branche-autonomie", "consulte_le": "2026-08-15" },
+    { "id": "ccomptes-hopitaux", "titre": "La situation financière des hôpitaux publics", "editeur": "Cour des comptes", "url": "https://www.ccomptes.fr/sites/default/files/2023-10/20231012-situation-financiere-des-hopitaux.pdf", "consulte_le": "2026-08-15" },
+    { "id": "igas-transition-2024", "titre": "Transition énergétique des établissements sanitaires et médico-sociaux", "editeur": "IGAS", "url": "https://igas.gouv.fr/sites/igas/files/2024-07/Transition%20%C3%A9nerg%C3%A9tique%20%28rapport%29.pdf", "consulte_le": "2026-08-15" }
   ],
   "collecte_annuelle": [
-    { "annee": 2005, "csa": 1950000000, "casa": 0, "total": 1950000000, "statut": "confirme", "source": "an-68328", "note": "Première année de la série officielle continue (question écrite AN n°68328). La CSA est prélevée depuis le 1er juillet 2004, mais aucun produit 2004 consolidé n'est publié séparément : l'année de mise en place 2004 n'est donc pas reportée." },
+    { "annee": 2004, "csa": 911000000, "casa": 0, "total": 911000000, "statut": "confirme", "source": "an-qe-2695", "note": "Année partielle de mise en place : la CSA est entrée en vigueur au 1er juillet 2004." },
+    { "annee": 2005, "csa": 1949000000, "casa": 0, "total": 1949000000, "statut": "confirme", "source": "an-qe-2695" },
     { "annee": 2006, "csa": 2085000000, "casa": 0, "total": 2085000000, "statut": "confirme", "source": "cnsa-cc-2021" },
     { "annee": 2007, "csa": 2220000000, "casa": 0, "total": 2220000000, "statut": "confirme", "source": "cnsa-cc-2021" },
-    { "annee": 2008, "csa": 2296000000, "casa": 0, "total": 2296000000, "statut": "confirme", "source": "cnsa-cc-2021", "note": "Pic avant la baisse liée à la crise de 2009." },
-    { "annee": 2009, "csa": 2206000000, "casa": 0, "total": 2206000000, "statut": "confirme", "source": "cnsa-cc-2021", "note": "Recul lié à la crise économique." },
+    { "annee": 2008, "csa": 2296000000, "casa": 0, "total": 2296000000, "statut": "confirme", "source": "cnsa-cc-2021" },
+    { "annee": 2009, "csa": 2206000000, "casa": 0, "total": 2206000000, "statut": "confirme", "source": "cnsa-cc-2021" },
     { "annee": 2010, "csa": 2239000000, "casa": 0, "total": 2239000000, "statut": "confirme", "source": "cnsa-cc-2021" },
     { "annee": 2011, "csa": 2334000000, "casa": 0, "total": 2334000000, "statut": "confirme", "source": "cnsa-cc-2021" },
     { "annee": 2012, "csa": 2389000000, "casa": 0, "total": 2389000000, "statut": "confirme", "source": "cnsa-cc-2021" },
-    { "annee": 2013, "csa": 2408000000, "casa": 479000000, "total": 2887000000, "statut": "confirme", "source": "cnsa-cc-2021", "note": "CASA créée le 1er avril 2013 (produit 479 M€) ; en 2013-2014 elle est affectée au Fonds de solidarité vieillesse (FSV) avant d'être affectée à la CNSA à partir de 2015." },
-    { "annee": 2014, "csa": 2428000000, "casa": 684000000, "total": 3112000000, "statut": "confirme", "source": "cnsa-cc-2021", "note": "Cumul CSA 2004-2014 ≈ 23,5 Md€, concordant avec le chiffrage Capgeris (23,497 Md€)." },
-    { "annee": 2015, "csa": 2468000000, "casa": 721000000, "total": 3189000000, "statut": "confirme", "source": "cnsa-cc-2021", "note": "CASA désormais affectée à la CNSA. Périmètre : la ligne CSA comptable 2015-2016 inclut une part de droits sur les tabacs (hors journée de solidarité), la CSA « masse salariale » seule étant légèrement inférieure (~2,4 Md€)." },
-    { "annee": 2016, "csa": 2513000000, "casa": 742000000, "total": 3255000000, "statut": "confirme", "source": "cnsa-cc-2021", "note": "La ligne CSA comptable inclut une part de droits sur les tabacs (hors journée de solidarité)." },
-    { "annee": 2017, "csa": 2372000000, "casa": 744000000, "total": 3116000000, "statut": "confirme", "source": "cnsa-cc-2021", "note": "Concorde avec le prévisionnel publié (CSA 2,37 Md€, CASA 743,8 M€)." },
-    { "annee": 2018, "csa": 2452000000, "casa": 772000000, "total": 3224000000, "statut": "confirme", "source": "cnsa-cc-2021", "note": "Comptable CNSA (le prévisionnel publié était CSA 2,42 Md€, CASA 765,4 M€)." },
-    { "annee": 2019, "csa": 2049000000, "casa": 762000000, "total": 2811000000, "statut": "confirme", "source": "cnsa-cc-2021", "note": "Forte baisse de la CSA : la réforme 2019 remplace la CSA assise sur les revenus du capital par de la CSG ; la CSA ne porte plus que sur la masse salariale (cœur de la journée de solidarité). Le prévisionnel annoncé par la CNSA était de 2,88 Md€ (CSA+CASA)." },
+    { "annee": 2013, "csa": 2408000000, "casa": 479000000, "total": 2887000000, "statut": "confirme", "source": "cnsa-cc-2021", "note": "CASA créée en 2013 ; elle est affectée au FSV en 2013-2014 puis à la CNSA à compter de 2015." },
+    { "annee": 2014, "csa": 2428000000, "casa": 684000000, "total": 3112000000, "statut": "confirme", "source": "cnsa-cc-2021" },
+    { "annee": 2015, "csa": 2468000000, "casa": 721000000, "total": 3189000000, "statut": "confirme", "source": "cnsa-cc-2021", "note": "La ligne CSA comptable 2015 inclut un périmètre plus large que la seule contribution sur salaires." },
+    { "annee": 2016, "csa": 2513000000, "casa": 742000000, "total": 3255000000, "statut": "confirme", "source": "cnsa-cc-2021", "note": "La ligne CSA comptable 2016 inclut un périmètre plus large que la seule contribution sur salaires." },
+    { "annee": 2017, "csa": 2372000000, "casa": 744000000, "total": 3116000000, "statut": "confirme", "source": "cnsa-cc-2021" },
+    { "annee": 2018, "csa": 2452000000, "casa": 772000000, "total": 3224000000, "statut": "confirme", "source": "cnsa-cc-2021" },
+    { "annee": 2019, "csa": 2049000000, "casa": 762000000, "total": 2811000000, "statut": "confirme", "source": "cnsa-cc-2021", "note": "À partir de 2019, la fraction assise sur les revenus du capital est remplacée par de la CSG ; la CSA correspond dès lors beaucoup plus directement à la contribution assise sur les salaires." },
     { "annee": 2020, "csa": 1996000000, "casa": 761000000, "total": 2757000000, "statut": "confirme", "source": "cnsa-cc-2021" },
-    { "annee": 2021, "csa": 2124000000, "casa": 783000000, "total": 2907000000, "statut": "confirme", "source": "cnsa-cc-2022", "note": "Création de la branche Autonomie : recettes regroupées dans un panier (dont CSG). Répartition des recettes 2021 de la CNSA." },
-    { "annee": 2022, "csa": 2262000000, "casa": 770000000, "total": 3032000000, "statut": "confirme", "source": "cnsa-annexe-2023", "note": "États financiers de la branche Autonomie (comparatif 2022) : CSA 2 262 278 917 €, CASA 769 686 159 €." },
-    { "annee": 2023, "csa": 2369000000, "casa": 873000000, "total": 3242000000, "statut": "confirme", "source": "cnsa-annexe-2023", "note": "États financiers de la branche Autonomie 2023 : CSA 2 369 092 463 €, CASA 873 449 128 €." },
-    { "annee": 2024, "csa": 2468000000, "casa": 913000000, "total": 3381000000, "statut": "confirme", "source": "ccss-2025", "note": "Résultats 2024 (semi-définitifs), rapport à la Commission des comptes de la Sécurité sociale d'octobre 2025 : CSA brute 2 468 M€, CASA brute 913 M€." },
-    { "annee": 2025, "csa": 2505000000, "casa": 978000000, "total": 3483000000, "statut": "confirme", "source": "cnsa-cc-2025", "note": "Chiffres clés CNSA 2025 (recettes affectées) : CSA 2 505 M€, CASA 978 M€ ; ensemble 3,48 Md€. La prévision CCSS d'octobre 2025 donne un montant voisin (CSA 2 518, CASA 950)." },
-    { "annee": 2026, "csa": 2562000000, "casa": 977000000, "total": 3539000000, "statut": "estime", "source": "ccss-2025", "note": "Prévision officielle (loi de financement de la Sécurité sociale) : rapport à la Commission des comptes de la Sécurité sociale d'octobre 2025, prévisions 2026 : CSA 2 562 M€, CASA 977 M€. Montant prévisionnel non encore exécuté." }
+    { "annee": 2021, "csa": 2124000000, "casa": 783000000, "total": 2907000000, "statut": "confirme", "source": "cnsa-cc-2022" },
+    { "annee": 2022, "csa": 2262000000, "casa": 770000000, "total": 3032000000, "statut": "confirme", "source": "cnsa-annexe-2023", "note": "Comptes : CSA 2 262 278 917 €, CASA 769 686 159 € ; valeurs du tableau arrondies au million." },
+    { "annee": 2023, "csa": 2369000000, "casa": 873000000, "total": 3242000000, "statut": "confirme", "source": "cnsa-annexe-2023", "note": "Comptes : CSA 2 369 092 463 €, CASA 873 449 128 € ; valeurs du tableau arrondies au million." },
+    { "annee": 2024, "csa": 2468000000, "casa": 913000000, "total": 3381000000, "statut": "confirme", "source": "cnsa-annexe-2025", "note": "Montants confirmés par les comptes 2025 dans la colonne comparative 2024." },
+    { "annee": 2025, "csa": 2521776923, "casa": 938100424, "total": 3459877347, "statut": "confirme", "source": "cnsa-annexe-2025", "note": "Comptes annuels 2025 certifiés : CSA 2 521 776 923 €, CASA 938 100 424 €." },
+    { "annee": 2026, "csa": 2384000000, "casa": 978000000, "total": 3362000000, "statut": "estime", "source": "cnsa-cc-2026", "note": "Prévision officielle publiée dans les Chiffres clés CNSA 2026 ; exercice non encore exécuté." }
   ],
   "repartition_legale": {
-    "intitule": "Répartition du produit de la CSA entre personnes âgées (60 %) et personnes handicapées (40 %) — la part de 40 % affectée au handicap est fixée par l'article L.14-10-5 du CASF.",
-    "note": "Seule la clé 60 % / 40 % (personnes âgées / personnes handicapées) est une obligation légale (art. L.14-10-5 CASF, part handicap = 40 %). La ventilation fine par poste (APA, PCH, ESMS, investissement) est indicative : elle reflète la destination des fonds via les anciennes sections de la CNSA, avant la mise en place de la branche Autonomie en 2021 qui a regroupé les recettes dans un budget unique.",
+    "intitule": "Répartition historique de l'ancienne CNSA : 60 % personnes âgées / 40 % personnes handicapées.",
+    "note": "Cette clé 60/40 correspond à l'ancienne organisation en sections de la CNSA et ne constitue plus, en 2026, une clé légale générale applicable au produit annuel de la CSA/CASA. Depuis la création de la branche Autonomie en 2021, les recettes sont intégrées à un budget de branche. Le diagramme conserve cette ventilation uniquement comme repère historique, et non comme traçage euro par euro des recettes actuelles.",
     "groupes": [
-      { "groupe": "Personnes âgées", "part": 0.60, "couleur": "#1f6f8b",
-        "postes": [
-          { "beneficiaire": "Établissements et services (ESMS) — personnes âgées", "part": 0.39 },
-          { "beneficiaire": "Allocation personnalisée d'autonomie (APA)", "part": 0.20 },
-          { "beneficiaire": "Plan d'aide à l'investissement — personnes âgées", "part": 0.01 }
-        ]
-      },
-      { "groupe": "Personnes handicapées", "part": 0.40, "couleur": "#e08e0b",
-        "postes": [
-          { "beneficiaire": "Prestation de compensation du handicap (PCH) et MDPH", "part": 0.26 },
-          { "beneficiaire": "Établissements et services (ESMS) — personnes handicapées", "part": 0.13 },
-          { "beneficiaire": "Plan d'aide à l'investissement — personnes handicapées", "part": 0.01 }
-        ]
-      }
+      { "groupe": "Personnes âgées", "part": 0.60, "couleur": "#1f6f8b", "postes": [
+        { "beneficiaire": "Établissements et services (ESMS) — personnes âgées", "part": 0.39 },
+        { "beneficiaire": "Allocation personnalisée d'autonomie (APA)", "part": 0.20 },
+        { "beneficiaire": "Plan d'aide à l'investissement — personnes âgées", "part": 0.01 }
+      ] },
+      { "groupe": "Personnes handicapées", "part": 0.40, "couleur": "#e08e0b", "postes": [
+        { "beneficiaire": "Prestation de compensation du handicap (PCH) et MDPH", "part": 0.26 },
+        { "beneficiaire": "Établissements et services (ESMS) — personnes handicapées", "part": 0.13 },
+        { "beneficiaire": "Plan d'aide à l'investissement — personnes handicapées", "part": 0.01 }
+      ] }
     ],
-    "source": "casf-l14105"
+    "source": "casf-l14105-historique",
+    "source_actuelle": "casf-l14105-actuel"
   },
   "budget_branche": {
     "annee": 2025,
@@ -109,82 +95,68 @@
       { "nom": "Interventions, gestion, investissement (Ségur), revalorisations", "montant": 2290000000 }
     ],
     "source": "cnsa-cc-2025",
-    "note": "Budget rectificatif 2025 de la branche Autonomie : charges 43,3 Md€, produits 42,5 Md€ (résultat prévisionnel -0,8 Md€). Financé à ~88 % par la CSG ; la journée de solidarité (CSA+CASA) en représente environ 8 % des recettes affectées. À titre de comparaison, le budget initial 2024 était de 40,6 Md€ de charges (OGD PA 16,26 Md€, OGD PH 15,21 Md€)."
+    "note": "Budget rectificatif 2025 : il s'agit d'une présentation budgétaire prévisionnelle, distincte des comptes définitifs 2025 utilisés pour les recettes CSA/CASA."
   },
   "recettes_cnsa_2025": {
     "annee": 2025,
     "postes": [
-      { "nom": "CSG", "montant": 37295000000 },
-      { "nom": "CSA (journée de solidarité — employeurs)", "montant": 2505000000 },
-      { "nom": "CASA (journée de solidarité — retraités)", "montant": 978000000 },
-      { "nom": "Taxe sur les salaires", "montant": 905000000 },
-      { "nom": "Taxe sur les conventions d'assurance", "montant": 130000000 },
-      { "nom": "Autres recettes affectées (compensation CSG/PSK, majorations, reprises)", "montant": 55000000 }
+      { "nom": "CSG", "montant": 37397000000 },
+      { "nom": "CSA (journée de solidarité — employeurs)", "montant": 2521776923 },
+      { "nom": "CASA (journée de solidarité — retraités)", "montant": 938100424 },
+      { "nom": "Taxe sur les salaires", "montant": 909000000 },
+      { "nom": "Taxe sur les conventions d'assurance", "montant": 132000000 }
     ],
-    "source": "cnsa-cc-2025",
-    "note": "Répartition des recettes affectées 2025 de la CNSA (Chiffres clés 2025). Total des recettes affectées ≈ 41,87 Md€ ; la CSG en représente 89 %, la journée de solidarité (CSA+CASA) environ 8 %."
+    "source": "cnsa-annexe-2025",
+    "note": "Montants issus des comptes annuels 2025. Les postes affichés couvrent les principales recettes affectées ; leur somme n'est pas présentée comme le total exhaustif des produits de la branche."
   },
   "promesse_vs_realite": {
     "chambres_non_climatisees_pct": 0.914,
     "chambres_non_climatisees_source": "fnadepa-2023",
-    "obligation_legale": "Au moins une pièce rafraîchie par établissement (art. D.312-161 CASF), pas la climatisation des chambres.",
+    "obligation_legale": "Au moins une pièce rafraîchie par établissement (art. D.312-161 CASF), pas la climatisation de toutes les chambres.",
     "surmortalite_estivale": [
-      { "annee": 2019, "deces": 1435, "source": "spf-2019", "note": "Excès de mortalité observé pendant les 2 vagues de chaleur (juin-juillet 2019)." },
-      { "annee": 2020, "deces": 1924, "source": "spf-2020", "note": "Excès de mortalité pendant les périodes de dépassement des seuils d'alerte (3 vagues de chaleur)." },
-      { "annee": 2022, "deces": 2816, "source": "spf-2022", "note": "Excès de mortalité pendant les 3 vagues de chaleur ; +10 420 décès sur l'ensemble de l'été (1er juin-15 sept.)." },
-      { "annee": 2023, "deces": 1500, "source": "spf-2023", "note": "Mortalité attribuable à la chaleur pendant les épisodes de canicule (nouvelle méthode SPF) ; plus de 5 000 décès attribuables sur tout l'été." },
-      { "annee": 2024, "deces": 600, "source": "spf-2024", "note": "Mortalité attribuable pendant les épisodes de canicule ; plus de 3 700 décès attribuables sur tout l'été." },
-      { "annee": 2025, "deces": 1900, "source": "spf-2025-bilan", "note": "Mortalité attribuable pendant les épisodes de canicule ; plus de 5 700 décès attribuables sur tout l'été." }
+      { "annee": 2019, "deces": 1462, "source": "spf-2019", "note": "Bilan final : excès de mortalité observé pendant les deux épisodes de chaleur de juin-juillet 2019." },
+      { "annee": 2020, "deces": 1924, "source": "spf-2020", "note": "Excès de mortalité pendant les vagues de chaleur." },
+      { "annee": 2022, "deces": 2816, "source": "spf-2022", "note": "Excès de mortalité pendant les trois vagues de chaleur ; 10 420 décès en excès sur l'ensemble de l'été." },
+      { "annee": 2023, "deces": 1500, "source": "spf-2023", "note": "Plus de 1 500 décès attribuables à la chaleur pendant les épisodes de canicule ; changement de méthode par rapport à la série antérieure." },
+      { "annee": 2024, "deces": 600, "source": "spf-2024", "note": "Plus de 600 décès attribuables pendant les épisodes de canicule ; plus de 3 700 sur l'ensemble de l'été." },
+      { "annee": 2025, "deces": 1900, "source": "spf-2025-bilan", "note": "Plus de 1 900 décès attribuables pendant les épisodes de canicule ; plus de 5 700 sur l'ensemble de l'été." }
     ],
-    "source": "spf-canicule",
-    "note": "La canicule de 2003 a causé près de 15 000 décès en France. Méthodologie Santé publique France : jusqu'en 2022, excès de mortalité observé pendant les vagues de chaleur ; à partir de 2023, mortalité (modélisée) attribuable à la chaleur pendant les épisodes de canicule — d'où une légère rupture de série entre 2022 et 2023."
+    "source": "spf-2025-bilan",
+    "note": "Rupture de méthode : jusqu'en 2022, les valeurs affichées correspondent à des excès de mortalité observés pendant les vagues de chaleur ; à partir de 2023, Santé publique France publie une mortalité modélisée attribuable à la chaleur. Les barres ne doivent donc pas être interprétées comme une série parfaitement homogène."
   },
   "climatisation_ehpad": {
-    "intitule": "Évolution de la climatisation / du rafraîchissement des EHPAD",
-    "meilleur_indicateur": "L'enquête EHPA de la DREES (quadriennale) est le meilleur indicateur officiel : elle mesure la part des établissements dont les espaces privatifs (chambres) et collectifs sont climatisés. Elle est complétée par l'enquête de la FNADEPA. Côté médico-social, l'ANAP et l'ATIH ont par ailleurs ajouté en 2022 au Tableau de bord de la performance des ESMS un indicateur annuel de « présence d'un système de rafraîchissement », appelé à devenir le suivi de référence.",
-    "limites": "Il n'existe pas de série annuelle continue. Les définitions varient (« au moins un espace » vs « tous les espaces » ; chambres vs espaces collectifs), ce qui limite les comparaisons directes d'une année sur l'autre. Pour les hôpitaux, il n'existe pas d'indicateur national équivalent du taux de chambres climatisées.",
+    "intitule": "Climatisation et rafraîchissement des établissements pour personnes âgées",
+    "meilleur_indicateur": "La DREES a publié en 2025 les données de bâti de l'enquête EHPA 2023, nouvelle enquête officielle de référence. Les chiffres historiques 2019 restent affichés pour permettre la comparaison avec le rapport du Sénat ; l'enquête FNADEPA 2023 apporte un éclairage complémentaire non exhaustif sur le confort d'été.",
+    "limites": "Les définitions diffèrent selon les sources (espaces privatifs, espaces collectifs, présence d'une pièce rafraîchie, climatisation). La FNADEPA est une enquête professionnelle et non une enquête exhaustive du service statistique public ; ses résultats ne doivent pas être confondus avec ceux d'EHPA.",
     "points": [
-      { "annee": 2003, "indicateur": "Établissements disposant d'une climatisation fixe dans au moins un espace collectif", "valeur": 0.19, "source": "drees-ehpa-2003", "note": "Base post-canicule. 96 % des établissements disposaient par ailleurs de volets/stores." },
-      { "annee": 2019, "indicateur": "EHPAD dont les espaces privatifs (chambres) sont climatisés", "par_statut": { "public": 0.037, "prive_non_lucratif": 0.059, "prive_lucratif": 0.18 }, "source": "senat-ehpad-2024", "note": "Source primaire : enquête EHPA 2019 de la DREES. Très faible diffusion de la climatisation des chambres, surtout dans le public." },
-      { "annee": 2019, "indicateur": "EHPAD dont l'ensemble des espaces collectifs sont climatisés", "par_statut": { "public": 0.492, "prive_non_lucratif": 0.562, "prive_lucratif": 0.80 }, "source": "senat-ehpad-2024", "note": "Source primaire : enquête EHPA 2019 de la DREES." },
-      { "annee": 2022, "indicateur": "EHPAD ayant subi un inconfort thermique dans les espaces privés (été 2022)", "valeur": 0.607, "source": "fnadepa-2023" },
-      { "annee": 2023, "indicateur": "EHPAD sans aucune chambre climatisée", "valeur": 0.914, "source": "fnadepa-2023", "note": "Soit environ 8,6 % des EHPAD avec au moins une chambre climatisée ; près de 5 % n'auraient même pas la pièce rafraîchie pourtant obligatoire (art. D.312-161 CASF)." }
+      { "annee": 2003, "indicateur": "Établissements disposant d'une climatisation fixe dans au moins un espace collectif", "valeur": 0.19, "source": "drees-ehpa-2003" },
+      { "annee": 2019, "indicateur": "EHPAD dont les espaces privatifs (chambres) sont climatisés", "par_statut": { "public": 0.037, "prive_non_lucratif": 0.059, "prive_lucratif": 0.18 }, "source": "senat-ehpad-2024", "note": "Données issues de l'enquête EHPA 2019 de la DREES." },
+      { "annee": 2019, "indicateur": "EHPAD dont l'ensemble des espaces collectifs sont climatisés", "par_statut": { "public": 0.492, "prive_non_lucratif": 0.562, "prive_lucratif": 0.80 }, "source": "senat-ehpad-2024", "note": "Données issues de l'enquête EHPA 2019 de la DREES." },
+      { "annee": 2022, "indicateur": "Directeurs jugeant les espaces privatifs thermiquement inconfortables durant l'été 2022", "valeur": 0.607, "source": "fnadepa-2023" },
+      { "annee": 2023, "indicateur": "Établissements sans climatisation dans les espaces privatifs", "valeur": 0.914, "source": "fnadepa-2023", "note": "Enquête FNADEPA 2023 ; 95,2 % déclaraient disposer d'une pièce rafraîchie." }
     ],
     "hopitaux": {
-      "constat": "Pour les hôpitaux, il n'existe aucun indicateur national du taux de chambres climatisées. La Cour des comptes relève qu'aucune étude nationale n'a été engagée pour connaître la qualité du parc immobilier hospitalier et sa capacité de résilience estivale. Indicateurs indirects : le taux de vétusté des constructions hospitalières est passé de 46 % (2010) à 50,5 % (2018), et l'investissement hospitalier a été divisé par deux entre 2009 et 2019. Selon l'IGAS (2024), la vétusté des hôpitaux publics a encore progressé (55,2 % en 2021, 58,8 % en 2022) et, sur le parc des CHU, seules 24 % des surfaces seraient conformes ou acceptables en performance énergétique (environ 70 % nécessiteraient une isolation). L'observatoire OSCIMES de l'ANAP, lui, ne porte que sur les surfaces et coûts immobiliers, pas sur la climatisation.",
-      "reglementation": "Des seuils de température n'existent que pour les zones critiques (blocs opératoires : 19-22 °C) ; aucune norme n'impose de température maximale dans les chambres de patients.",
-      "mesures_2026": "Face à la canicule de juin 2026, le gouvernement a commandé en urgence 30 000 climatiseurs pour les établissements de santé (enveloppe de 100 M€), et annoncé dans le plan d'investissement hôpital 2026-2035 (6 Md€) un doublement de l'enveloppe de rénovation énergétique, portée à 600 M€. L'IGAS chiffre par ailleurs le besoin de rénovation énergétique du parc à 1 à 2,5 Md€ par an entre 2025 et 2050.",
-      "sources": ["ccomptes-hopitaux", "igas-transition-2024", "gouv-clim-2026"]
+      "constat": "Il n'existe pas de statistique nationale directement comparable donnant le taux de chambres hospitalières climatisées. Les rapports de la Cour des comptes et de l'IGAS documentent plutôt l'état du parc, la vétusté et les besoins de rénovation énergétique.",
+      "reglementation": "Le site ne retient plus de seuil chiffré de température pour les chambres ou les blocs opératoires faute d'avoir identifié, dans cet audit, un texte réglementaire primaire justifiant une présentation générale de ce type.",
+      "mesures_2026": "Les annonces ponctuelles de l'été 2026 ne sont pas utilisées ici comme indicateur structurel du taux de climatisation hospitalière.",
+      "sources": ["ccomptes-hopitaux", "igas-transition-2024"]
     }
   },
   "analyses": {
     "avertissement": "Cette section rassemble des interprétations et prises de position. Elle est distincte des données factuelles ci-dessus.",
     "estimation_haute": {
-      "valeur_libelle": "plus de 62 Md€",
-      "auteur": "Document de synthèse « Analyse sous prisme libéral » (juin 2026)",
-      "explication": "Les deux chiffres se réconcilient par le périmètre. En sommant ce tableau année par année (chiffres officiels CNSA et CCSS) : la CSA seule atteint environ 45,6 Md€ fin 2024 et 48,1 Md€ fin 2025, et franchit les 50 Md€ en 2026 (50,7 Md€ avec la prévision de la loi de financement) — l'ordre de grandeur du chiffrage officiel CNSA (« plus de 50 Md€ » sur 20 ans). L'écart de quelques milliards tient au périmètre : la CNSA compte la CSA d'avant la réforme 2019 incluant la part assise sur les revenus du capital, qui ne relève plus de la journée de solidarité depuis. En ajoutant la CASA (retraités), l'ensemble CSA+CASA atteint ~58 Md€ fin 2025 et dépasse 61 Md€ avec 2026 — ce qui correspond à l'estimation du document. Aucun des deux n'est « faux » : ils ne comptent simplement pas la même chose. Le présent site affiche les deux, clairement étiquetés."
+      "valeur_libelle": "environ 62,4 Md€ avec la prévision 2026",
+      "auteur": "Somme de la série officielle affichée sur le site",
+      "explication": "En incluant l'année partielle 2004, la série affiche environ 49,1 Md€ de CSA cumulée fin 2025 et 59,0 Md€ de CSA+CASA. Avec la prévision CNSA 2026, ces cumuls atteignent environ 51,4 Md€ et 62,4 Md€. Le chiffrage CNSA « plus de 50 Md€ » porte sur la contribution solidarité autonomie sur vingt ans et n'est pas strictement équivalent au cumul CSA+CASA du tableau."
     },
     "lectures": [
-      { "angle": "Lecture libérale (document fourni)", "points": [
-        "La CSA est analysée comme un impôt déguisé, sans contrepartie de droits individuels ni ligne explicite sur la fiche de paie.",
-        "Fongibilité des fonds depuis 2021 (branche Autonomie) : la traçabilité euro par euro de la journée de solidarité n'est plus possible.",
-        "Coût d'opportunité : une journée de travail nationale vaudrait ~11 Md€ de valeur ajoutée, alors que la CSA n'en collecte qu'environ un tiers.",
-        "Paradoxe : prélever pour protéger les personnes âgées de la chaleur, mais ne pas climatiser leurs chambres (raisons environnementales/budgétaires)."
-      ], "source": "cnsa-20ans" },
-      { "angle": "Positions syndicales", "points": [
-        "CFDT : une éventuelle 2e journée pèserait sur les seuls salariés alors que le risque dépendance est universel.",
-        "CGT : remise en cause de la durée légale du travail (35 h)."
-      ], "source": "cnsa-20ans" },
+      { "angle": "Traçabilité depuis 2021", "points": [
+        "Depuis la création de la branche Autonomie, la CSA et la CASA entrent dans un ensemble de recettes de branche comprenant notamment la CSG.",
+        "Il n'est donc pas rigoureux d'affecter euro par euro les recettes annuelles CSA/CASA à une dépense précise au moyen de l'ancienne clé 60/40."
+      ], "source": "casf-l14105-actuel" },
       { "angle": "Cour des comptes", "points": [
-        "Sous-consommation structurelle des crédits et reports d'une année sur l'autre.",
-        "Opacité du suivi territorial (APA versée via les départements), absence de bilan consolidé national.",
-        "Effet de substitution : certains financements remplacent des dépenses que l'État ou les départements auraient assumées."
-      ], "source": "courdescomptes-2023" },
-      { "angle": "Comparaisons internationales", "points": [
-        "Allemagne : assurance dépendance obligatoire (Pflegeversicherung, 1995) à droits individuels.",
-        "Espagne : pas de mécanisme dédié mais climatisation quasi universelle des lieux publics.",
-        "Singapour : capitalisation individuelle (CareShield Life)."
-      ], "source": "libault-2019" }
+        "La Cour des comptes analyse la gouvernance, le financement et le pilotage de la branche Autonomie, ce qui constitue la source de référence pour discuter les limites de traçabilité et de pilotage."
+      ], "source": "courdescomptes-2023" }
     ]
   }
 }

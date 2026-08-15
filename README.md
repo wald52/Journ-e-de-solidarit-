@@ -1,121 +1,125 @@
 # Où est passé l'argent de la journée de solidarité ?
 
-Site citoyen, ouvert et non partisan, qui retrace **combien rapporte la journée de
-solidarité** en France, **année après année**, et **où va l'argent**. Visualisation
-des flux par un **diagramme de Sankey**, données **sourcées** et **téléchargeables**.
+Site citoyen, ouvert et non partisan, qui retrace **combien rapporte la journée de solidarité** en France, **année après année**, et **où va l'argent**. Les données sont sourcées, téléchargeables et accompagnées d'un statut de fiabilité.
 
 ## Le sujet en bref
 
-La journée de solidarité (loi du 30 juin 2004, dans la foulée de la canicule de 2003)
-fait travailler les salariés 7 h non rémunérées par an. Elle se matérialise par deux
-prélèvements affectés à la **CNSA** (Caisse nationale de solidarité pour l'autonomie) :
+La journée de solidarité a été créée par la loi du 30 juin 2004, dans la foulée de la canicule de 2003. Elle s'accompagne notamment de deux prélèvements affectés au financement de l'autonomie :
 
-- **CSA** — 0,30 % de la masse salariale brute, payée par les employeurs (depuis 2004) ;
-- **CASA** — 0,30 % sur les pensions imposables des retraités (depuis 2013, versée à la
-  CNSA à partir de 2015).
+- **CSA** — 0,30 % de la masse salariale brute, versée par les employeurs ;
+- **CASA** — 0,30 % sur certaines pensions de retraite et d'invalidité, créée en 2013 et affectée à la CNSA depuis 2015.
 
-En cumulé (chiffres comptables CNSA/CCSS), la CSA seule atteint environ **49 Md€ fin 2025**
-et franchit les **50 Md€** en 2026 — conforme au chiffrage CNSA « plus de 50 Md€ sur 20 ans » ;
-**CSA + CASA** approchent **59 Md€ fin 2025** et dépassent **61 Md€** avec 2026. Pourtant, selon
-l'enquête **FNADEPA 2023**, **91,4 % des EHPAD n'ont aucune chambre climatisée**, et la
-surmortalité estivale persiste. Le site présente les faits, leurs sources, et — dans une
-section distincte — les analyses et débats.
+La série du site commence désormais en **2004**, avec **911 M€ de CSA** pour cette année partielle de mise en place. Ce montant est publié dans une réponse officielle de l'Assemblée nationale.
+
+Après audit des sources au **15 août 2026** :
+
+- **2025** utilise les comptes annuels certifiés de la CNSA : **2 521 776 923 € de CSA** et **938 100 424 € de CASA**, soit **3 459 877 347 €** ;
+- **2026** reste une prévision : les *Chiffres clés 2026* de la CNSA retiennent environ **2,384 Md€ de CSA** et **978 M€ de CASA**, soit **3,362 Md€** ;
+- en incluant l'année partielle 2004, la série atteint environ **49,1 Md€ de CSA fin 2025** et **59,0 Md€ de CSA+CASA** ; avec la prévision 2026, environ **51,4 Md€** et **62,4 Md€**.
+
+Ces cumuls ne doivent pas être confondus avec le chiffrage CNSA « plus de 50 Md€ sur 20 ans », dont le périmètre n'est pas strictement identique à la somme CSA+CASA présentée ici.
+
+## Point important sur la répartition 60/40
+
+Une version antérieure du site présentait **60 % personnes âgées / 40 % personnes handicapées** comme une clé légale actuelle applicable au produit annuel de la journée de solidarité. Cette formulation était devenue inexacte.
+
+Cette ventilation correspond à l'**ancienne organisation en sections de la CNSA**. Depuis la création de la branche Autonomie en 2021, les recettes (CSA, CASA, CSG, etc.) entrent dans un budget de branche et l'article L.14-10-5 du CASF en vigueur ne fixe plus cette clé générale 60/40.
+
+Le Sankey conserve donc cette ventilation uniquement comme **repère historique**, et non comme traçage euro par euro des recettes actuelles.
 
 ## Structure du projet
 
-```
+```text
 index.html            page unique (sections ancrées)
 assets/
   style.css           mise en forme
-  app.js              chargement des données + rendu (compteurs, tableau, sources…)
-  charts.js           graphiques ECharts (Sankey, histogrammes, surmortalité, climatisation)
+  app.js              chargement des données + rendu
+  charts.js           graphiques ECharts
 data/
-  donnees.json        SOURCE UNIQUE DE VÉRITÉ : tous les chiffres + leurs sources
-  donnees.csv         export plat des collectes annuelles (généré depuis le JSON)
+  donnees.json        SOURCE UNIQUE DE VÉRITÉ
+  donnees.csv         export plat des collectes annuelles
 scripts/
-  validate-data.mjs   contrôle d'intégrité des données (utilisé par la CI)
-  build-csv.mjs       régénère donnees.csv à partir de donnees.json
+  validate-data.mjs   contrôle d'intégrité
+  build-csv.mjs       régénère le CSV depuis le JSON
 ```
 
-Aucun build, aucune dépendance à installer : du HTML/CSS/JS statique. La seule
-librairie de graphiques (Apache ECharts, licence Apache 2.0) est **embarquée
-localement** dans `assets/vendor/echarts.min.js` — pas de dépendance à un CDN
-tiers, le site fonctionne hors-ligne et de façon reproductible.
+Aucun build applicatif ni dépendance npm n'est nécessaire. Apache ECharts est embarqué localement dans `assets/vendor/echarts.min.js`.
 
 ## Lancer en local
-
-Le site charge `data/donnees.json` via `fetch`, ce qui nécessite un serveur HTTP
-(ouvrir le fichier en `file://` ne fonctionne pas). Le plus simple :
 
 ```bash
 python3 -m http.server 8000
 # puis ouvrir http://localhost:8000
 ```
 
-## Héberger (gratuit)
-
-Compatible **GitHub Pages** : activez Pages sur la branche, le site est servi tel quel
-(c'est un site statique à la racine du dépôt).
-
 ## Les données
 
-Chaque valeur de `data/donnees.json` porte :
+Chaque valeur importante de `data/donnees.json` renvoie à une source et, pour la collecte annuelle, à un statut :
 
-- une **source** (`source`) renvoyant à la liste `sources` (éditeur + URL) ;
-- un **statut** de fiabilité :
-  - `confirme` — chiffre publié par une source officielle ;
-  - `estime` — reconstitué par recoupement ou projection officielle ;
-  - `a_confirmer` — ordre de grandeur, à vérifier sur source primaire.
+- `confirme` — chiffre publié par une source officielle ;
+- `estime` — prévision officielle ou projection ;
+- `a_confirmer` — ordre de grandeur restant à vérifier.
 
-Les chiffres `a_confirmer` ne sont jamais présentés comme des faits établis (badge visible
-dans l'interface). Mettre à jour le site = éditer `donnees.json` (puis régénérer le CSV).
+La série 2004-2025 est au statut `confirme`. **2026 est `estime`**, car l'exercice n'est pas encore exécuté.
 
-À ce jour, la série annuelle de collecte est presque entièrement au statut `confirme`
-(sources CNSA, CCSS, états financiers de la branche Autonomie). Seule l'année 2026 reste
-`estime`, car c'est une prévision officielle (loi de financement / CCSS) non encore exécutée.
-La section « Climatisation des EHPAD » s'appuie sur l'enquête EHPA de la DREES, l'enquête
-FNADEPA et des rapports IGAS / Cour des comptes.
+### Nuances de périmètre de la CSA
 
-### Valider et régénérer les données
+La ligne comptable historique appelée « CSA » n'est pas parfaitement homogène sur toute la période. Avant 2019, elle comprend notamment une fraction assise sur les revenus du capital ; en 2015-2016, une part de droits sur les tabacs intervient également. Ces éléments ne correspondent pas strictement à la seule contribution patronale de 0,30 % liée à la journée de solidarité.
 
-Deux scripts Node (sans dépendance à installer) sécurisent les données :
+Le site conserve la série comptable CNSA mais signale ces ruptures de périmètre.
+
+## Chaleur et EHPAD
+
+L'audit distingue désormais explicitement les sources :
+
+- **EHPA/DREES** : enquête officielle du service statistique public, exhaustive sur son champ ;
+- **FNADEPA 2023** : enquête professionnelle complémentaire, qui rapporte notamment **91,4 %** d'établissements sans climatisation dans les espaces privatifs et **60,7 %** de directeurs jugeant ces espaces thermiquement inconfortables pendant l'été 2022 ;
+- la DREES a publié en 2025 les données de bâti de la nouvelle enquête **EHPA 2023**, qui devient la référence officielle la plus récente.
+
+Les chiffres 2019 affichés par statut proviennent de l'enquête EHPA 2019 reprise dans le rapport du Sénat :
+
+- espaces privatifs climatisés : **3,7 % public**, **5,9 % privé non lucratif**, **18 % privé lucratif** ;
+- ensemble des espaces collectifs climatisés : **49,2 %**, **56,2 %**, **80 %**.
+
+## Mortalité liée à la chaleur
+
+Le site signale une rupture méthodologique :
+
+- jusqu'en 2022, Santé publique France publie notamment des **excès de mortalité observés** pendant les vagues de chaleur ;
+- à partir de 2023, les valeurs utilisées correspondent à une **mortalité modélisée attribuable à la chaleur**.
+
+Le chiffre 2019 a été corrigé vers le bilan final : **1 462 décès en excès**, au lieu du bilan préliminaire de 1 435.
+
+## Valider et régénérer les données
 
 ```bash
-npm run validate    # contrôle d'intégrité (échoue si une incohérence est trouvée)
-npm run build:csv   # régénère data/donnees.csv depuis data/donnees.json
+npm run validate
+npm run build:csv
 ```
 
-`npm run validate` vérifie notamment que `total = CSA + CASA` pour chaque année,
-que chaque `source` référencée existe, que les statuts sont valides, que la clé
-de répartition somme à 100 %, et que le CSV committé est bien à jour vis-à-vis du
-JSON. Ces contrôles tournent aussi automatiquement en intégration continue
-(`.github/workflows/ci.yml`) à chaque push et pull request.
+`npm run validate` contrôle notamment :
 
-Après toute modification de `data/donnees.json`, lancez `npm run build:csv` puis
-committez le CSV régénéré.
+- `total = CSA + CASA` pour chaque année ;
+- l'existence de toutes les sources référencées ;
+- la validité des statuts ;
+- la cohérence de la ventilation historique ;
+- la synchronisation du CSV avec le JSON.
+
+La CI GitHub exécute ces contrôles sur chaque push et pull request.
 
 ## Principes éditoriaux
 
-- Le **cœur du site** est factuel : chiffres + sources, sans adjectifs militants.
-- Les **interprétations** (lecture libérale, positions syndicales, Cour des comptes,
-  comparaisons internationales) vivent dans une section **« Analyses »** clairement
-  identifiée et séparée.
-- Toute affirmation chiffrée renvoie à une source cliquable.
-
-## Contribuer
-
-Corrections de chiffres, ajout de sources primaires (notamment l'exécution comptable
-définitive de 2024-2026 quand elle paraîtra, ou un taux national de climatisation des
-EHPAD/hôpitaux s'il devient public), améliorations d'accessibilité : les contributions
-sont bienvenues. Indiquez toujours la source de chaque chiffre modifié.
+- Le **cœur du site** est factuel : chiffres, périmètres et sources.
+- Une prévision est explicitement distinguée d'un compte exécuté.
+- Une source primaire ou institutionnelle est préférée lorsqu'elle existe.
+- Les enquêtes professionnelles sont identifiées comme telles et ne sont pas assimilées à des statistiques officielles exhaustives.
+- Les interprétations sont séparées dans la section « Analyses ».
 
 ## Licence
 
-- **Code** (HTML, CSS, JS, scripts) : licence **MIT** (voir `LICENSE`).
-- **Données** (`data/donnees.json`, `data/donnees.csv`) : **Licence Ouverte /
-  Open Licence 2.0** (Etalab). Citez toujours la source d'origine de chaque chiffre.
+- **Code** : MIT ;
+- **Données** : Licence Ouverte / Open Licence 2.0 (Etalab), sous réserve des droits attachés aux sources d'origine.
 
 ## Avertissement
 
-Projet citoyen indépendant. Il agrège des données publiques et ne représente aucune
-institution.
+Projet citoyen indépendant. Il agrège des données publiques et ne représente aucune institution.
