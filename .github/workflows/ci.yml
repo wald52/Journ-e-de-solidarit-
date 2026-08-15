@@ -25,8 +25,44 @@ jobs:
         run: |
           node --check sw.js
           node --check assets/pwa.js
-      - name: Manifeste PWA et icônes requises
+      - name: Manifeste PWA
+        run: node -e "JSON.parse(require('fs').readFileSync('manifest.webmanifest', 'utf8'))"
+      - name: Décodage réel des icônes PWA
         run: |
-          node -e "JSON.parse(require('fs').readFileSync('manifest.webmanifest', 'utf8'))"
-          test -f assets/icons/icon-192.png
-          test -f assets/icons/icon-512.png
+          python3 - <<'PY'
+          import struct, zlib
+          from pathlib import Path
+
+          def check_png(path, expected):
+              data = Path(path).read_bytes()
+              assert data[:8] == b'\x89PNG\r\n\x1a\n', f'{path}: signature PNG invalide'
+              pos = 8
+              width = height = None
+              idat = []
+              seen_iend = False
+              while pos < len(data):
+                  assert pos + 12 <= len(data), f'{path}: chunk tronqué'
+                  length = struct.unpack('>I', data[pos:pos+4])[0]
+                  kind = data[pos+4:pos+8]
+                  payload = data[pos+8:pos+8+length]
+                  crc_expected = struct.unpack('>I', data[pos+8+length:pos+12+length])[0]
+                  crc_actual = zlib.crc32(kind)
+                  crc_actual = zlib.crc32(payload, crc_actual) & 0xffffffff
+                  assert crc_actual == crc_expected, f'{path}: CRC invalide dans {kind.decode("ascii", "replace")}'
+                  if kind == b'IHDR':
+                      width, height = struct.unpack('>II', payload[:8])
+                  elif kind == b'IDAT':
+                      idat.append(payload)
+                  elif kind == b'IEND':
+                      seen_iend = True
+                      break
+                  pos += 12 + length
+              assert (width, height) == expected, f'{path}: dimensions {(width, height)} au lieu de {expected}'
+              assert idat, f'{path}: aucun IDAT'
+              zlib.decompress(b''.join(idat))
+              assert seen_iend, f'{path}: IEND absent'
+              print(f'✓ {path}: {width}x{height}, PNG décodable')
+
+          check_png('assets/icons/icon-192.png', (192, 192))
+          check_png('assets/icons/icon-512.png', (512, 512))
+          PY
