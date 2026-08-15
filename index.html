@@ -6,12 +6,17 @@
   <meta name="color-scheme" content="light" />
   <meta name="theme-color" content="#1f6f8b" />
   <meta name="supported-color-schemes" content="light" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Solidarité" />
   <title>Où est passé l'argent de la journée de solidarité ?</title>
   <meta name="description" content="Site citoyen : combien rapporte la journée de solidarité en France, année par année, et où va l'argent. Données sourcées, diagramme de Sankey des flux." />
 
   <link rel="canonical" href="https://wald52.github.io/journ-e-de-solidarit-/" />
+  <link rel="manifest" href="manifest.webmanifest" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="apple-touch-icon" href="favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png" />
 
   <!-- Open Graph / partage social -->
   <meta property="og:type" content="website" />
@@ -39,10 +44,10 @@
     "@context": "https://schema.org",
     "@type": "Dataset",
     "name": "Collecte annuelle de la journée de solidarité (CSA + CASA) en France",
-    "description": "Produit annuel de la journée de solidarité en France (contribution solidarité autonomie et contribution additionnelle), année par année depuis 2005, avec sources officielles et statut de fiabilité.",
+    "description": "Produit annuel de la journée de solidarité en France (contribution solidarité autonomie et contribution additionnelle), année par année depuis 2004, avec sources officielles et statut de fiabilité.",
     "url": "https://wald52.github.io/journ-e-de-solidarit-/",
     "keywords": ["journée de solidarité", "CSA", "CASA", "CNSA", "branche Autonomie", "France", "données publiques"],
-    "dateModified": "2026-06-30",
+    "dateModified": "2026-08-15",
     "license": "https://www.etalab.gouv.fr/licence-ouverte-open-licence",
     "isAccessibleForFree": true,
     "creator": { "@type": "Organization", "name": "Projet citoyen indépendant" },
@@ -127,9 +132,10 @@
         <h2>Le parcours de l'argent</h2>
         <p>
           Diagramme de Sankey&nbsp;: des sources de financement (à gauche) vers la CNSA,
-          puis vers les bénéficiaires, selon la clé de répartition légale
-          (<abbr title="Code de l'action sociale et des familles">CASF</abbr>, art. L.14-10-5).
-          Les flux sont proportionnels au montant de l'année sélectionnée.
+          puis vers les bénéficiaires selon la <strong>ventilation historique 60 % / 40 %</strong>
+          de l'ancienne architecture de la CNSA. Depuis la création de la branche Autonomie en
+          2021, cette ventilation n'est plus une clé légale générale applicable aux recettes courantes.
+          Les flux sont proportionnels au montant de l'année sélectionnée et servent de repère historique.
         </p>
         <div class="chart-controls">
           <label for="annee-sankey">Année&nbsp;:</label>
@@ -184,15 +190,17 @@
       <div class="wrap">
         <h2>Où va l'argent ?</h2>
         <p>
-          La loi fixe une clé de répartition&nbsp;: <strong>60 %</strong> pour les personnes
-          âgées, <strong>40 %</strong> pour les personnes handicapées, avec des sous-parts
-          détaillées ci-dessous. Dans les faits, la journée de solidarité n'est qu'une partie
-          (<strong id="jds-part">~8 %</strong>) des recettes de la branche Autonomie, financée
-          à <strong id="csg-part">~89 %</strong> par la CSG.
+          Historiquement, l'ancienne architecture de la CNSA ventilait le produit selon un repère
+          <strong>60 % personnes âgées / 40 % personnes handicapées</strong>. Cette présentation
+          est conservée ci-dessous pour comprendre les destinations historiques, mais elle ne constitue
+          plus une clé légale générale depuis la création de la branche Autonomie en 2021. Dans les faits,
+          la journée de solidarité n'est qu'une partie (<strong id="jds-part">~8 %</strong>) des
+          recettes de la branche Autonomie, financée majoritairement à
+          <strong id="csg-part">~89 %</strong> par la CSG.
         </p>
         <div class="two-col">
           <div>
-            <h3>Clé de répartition légale</h3>
+            <h3>Ventilation historique de l'ancienne CNSA</h3>
             <div id="repartition" class="bars-stack"><!-- rempli par JS --></div>
           </div>
           <div>
@@ -203,7 +211,7 @@
         <h3>D'où viennent les recettes de la branche (2025)&nbsp;?</h3>
         <p>
           La journée de solidarité (CSA + CASA, en surbrillance) ne pèse qu'une petite part des
-          recettes affectées à la branche Autonomie, très majoritairement financée par la CSG.
+          principales recettes affectées à la branche Autonomie, très majoritairement financée par la CSG.
         </p>
         <div id="recettes" class="bars-stack"><!-- rempli par JS --></div>
         <div class="callout">
@@ -306,5 +314,6 @@
   <script defer src="assets/vendor/echarts.min.js"></script>
   <script defer src="assets/app.js"></script>
   <script defer src="assets/charts.js"></script>
+  <script defer src="assets/pwa.js"></script>
 </body>
 </html>
